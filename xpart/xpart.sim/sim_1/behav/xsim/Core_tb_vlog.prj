@@ -1,0 +1,47 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../scpu/src/top/core/scpu/datapath/app" --include "../../../../../scpu/src/top/core/scpu/datapath/csr" \
+"../../../../../scpu/src/top/core/scpu/datapath/control/Control.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/app/MUX2T1_32.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/app/MUX2T1_64.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/app/MUX4T1_64.v" \
+"../../../../../scpu/src/top/core/scpu/SCPU.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/app/add.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/app/alu.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/app/alu_control.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/app/alu_op.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/app/branch_jump_detect.v" \
+"../../../../../scpu/src/top/core/core.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/csr/csr_control.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/csr/csr_ex_unit.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/csr/csr_forwarding_unit.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/csr/csr_source_mux.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/csr/csr_unit.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/datapath.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/app/ex_add.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/regs/exmemreg.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/app/forwarding_unit.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/app/id_idex_signal.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/app/id_inst_mux.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/regs/idexreg.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/app/if_inst_mux.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/regs/ifidreg.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/app/imm_gen.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/regs/memwbreg.v" \
+"../../../../../scpu/ram/myRam.v" \
+"../../../../../scpu/rom/myRom.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/app/pc.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/app/pc_branch_mux.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/app/pc_src0_gen.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/app/pc_src1_gen.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/app/raw_hazard_unit.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/app/registers.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/app/sheft_left1.v" \
+
+sv xil_defaultlib  --include "../../../../../scpu/src/top/core/scpu/datapath/app" --include "../../../../../scpu/src/top/core/scpu/datapath/csr" \
+"../../../../../scpu/test_bench/Core_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Core_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Core_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1075001fs"></ZoomEndTime>
+      <Cursor1Time time="726000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="110"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="9" />
+   <wvobject fp_name="/Core_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Core_tb/aresetn" type="logic">
+      <obj_property name="ElementShortName">aresetn</obj_property>
+      <obj_property name="ObjectShortName">aresetn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Core_tb/pc_out" type="array">
+      <obj_property name="ElementShortName">pc_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Core_tb/addr_out" type="array">
+      <obj_property name="ElementShortName">addr_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_out[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Core_tb/inst" type="array">
+      <obj_property name="ElementShortName">inst[31:0]</obj_property>
+      <obj_property name="ObjectShortName">inst[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Core_tb/uut/cpu/datapath/regs/registers" type="array">
+      <obj_property name="ElementShortName">registers[1:31][31:0]</obj_property>
+      <obj_property name="ObjectShortName">registers[1:31][31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Core_tb/uut/rom_unit/rom" type="array">
+      <obj_property name="ElementShortName">rom[0:2047][31:0]</obj_property>
+      <obj_property name="ObjectShortName">rom[0:2047][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Core_tb/uut/ram_unit/ram" type="array">
+      <obj_property name="ElementShortName">ram[0:16383][3:0]</obj_property>
+      <obj_property name="ObjectShortName">ram[0:16383][3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="group32859" type="group">
+      <obj_property name="label">ram</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/Core_tb/uut/ram_unit/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/ram_unit/we" type="logic">
+         <obj_property name="ElementShortName">we</obj_property>
+         <obj_property name="ObjectShortName">we</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/ram_unit/write_data" type="array">
+         <obj_property name="ElementShortName">write_data[63:0]</obj_property>
+         <obj_property name="ObjectShortName">write_data[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/ram_unit/myraminput_inst" type="array">
+         <obj_property name="ElementShortName">myraminput_inst[31:0]</obj_property>
+         <obj_property name="ObjectShortName">myraminput_inst[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/ram_unit/address" type="array">
+         <obj_property name="ElementShortName">address[10:0]</obj_property>
+         <obj_property name="ObjectShortName">address[10:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/ram_unit/read_data" type="array">
+         <obj_property name="ElementShortName">read_data[63:0]</obj_property>
+         <obj_property name="ObjectShortName">read_data[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/ram_unit/ram" type="array">
+         <obj_property name="ElementShortName">ram[0:16383][3:0]</obj_property>
+         <obj_property name="ObjectShortName">ram[0:16383][3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/ram_unit/opcode" type="array">
+         <obj_property name="ElementShortName">opcode[6:0]</obj_property>
+         <obj_property name="ObjectShortName">opcode[6:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/ram_unit/funct3" type="array">
+         <obj_property name="ElementShortName">funct3[2:0]</obj_property>
+         <obj_property name="ObjectShortName">funct3[2:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

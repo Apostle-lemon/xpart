@@ -1,0 +1,50 @@
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/20201/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 8bc4e36ae31644abab61313172f33358 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Core_tb_behav xil_defaultlib.Core_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 11 for port 'address' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/core.v:69]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ADD
+Compiling module xil_defaultlib.PC_BRANCH_MUX
+Compiling module xil_defaultlib.MUX2T1_32
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IFINSTMUX
+Compiling module xil_defaultlib.IFIDREG
+Compiling module xil_defaultlib.ID_INST_MUX
+Compiling module xil_defaultlib.CONTROL
+Compiling module xil_defaultlib.RAW_HAZARD_UNIT
+Compiling module xil_defaultlib.ID_IDEX_SIGNAL
+Compiling module xil_defaultlib.REGS
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.ALUOP
+Compiling module xil_defaultlib.IDEXREG
+Compiling module xil_defaultlib.CSR_FORWARDING_UNIT
+Compiling module xil_defaultlib.CSR_SOURCE_MUX
+Compiling module xil_defaultlib.CSR_EX_UNIT
+Compiling module xil_defaultlib.CSR_CONTROL
+Compiling module xil_defaultlib.CSR_UNIT
+Compiling module xil_defaultlib.SHEFT_LEFT1
+Compiling module xil_defaultlib.EXADD
+Compiling module xil_defaultlib.BRANCH_JUMP_DETECT
+Compiling module xil_defaultlib.FORWARDING_UNIT
+Compiling module xil_defaultlib.MUX4T1_64
+Compiling module xil_defaultlib.MUX2T1_64
+Compiling module xil_defaultlib.ALUCONTROL
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EXMEMREG
+Compiling module xil_defaultlib.PCSRC1GEN
+Compiling module xil_defaultlib.PCSRC0GEN
+Compiling module xil_defaultlib.MEMWBREG
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.SCPU
+Compiling module xil_defaultlib.myRom
+Compiling module xil_defaultlib.myRam
+Compiling module xil_defaultlib.Core
+Compiling module xil_defaultlib.Core_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Core_tb_behav
