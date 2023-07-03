@@ -10,5 +10,7 @@ parameter   ADD  = 4'b0000,
 			SRL  = 4'b0101,
 			SRA  = 4'b1101,
 			OR   = 4'b0110,
-			AND  = 4'b0111;
+			AND  = 4'b0111,
+			ADDW = 4'b1000,
+			ADDIW = 4'b1000; // not used in alu, just write for completeness
 //`endif

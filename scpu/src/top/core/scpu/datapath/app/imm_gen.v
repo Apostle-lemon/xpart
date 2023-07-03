@@ -27,6 +27,8 @@ module ImmGen(
             7'b1100111: imm = {inst[31]==1?52'hfffffffffffff:52'b0, inst[31:20]};
             // auipc
             7'b0010111: imm = {inst[31]==1?32'hffffffff:32'b0,inst[31:12],12'h000};
+            // addiw
+            7'b0011011: imm = {inst[31]==1?52'hfffffffffffff:52'b0, inst[31:20]};
             default: imm = 0;
         endcase
     end

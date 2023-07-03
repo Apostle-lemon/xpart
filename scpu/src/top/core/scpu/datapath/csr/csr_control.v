@@ -1,7 +1,8 @@
 module CSR_CONTROL(
     input [31:0] csrcontrolin_inst,
     output csrcontrolout_csr_write,
-    output csrcontrolout_mem_is_mret
+    output csrcontrolout_mem_is_mret,
+    output csrcontrolout_mem_is_sret
 );
 
 // 这个模组这个决定了要不要将 csr 的数据更新
@@ -14,6 +15,7 @@ module CSR_CONTROL(
 
 reg csrcontrolout_csr_write_reg;
 reg csrcontrolout_mem_is_mret_reg;
+reg csrcontrolout_mem_is_sret_reg;
 
 always @(*) begin
     case(csrcontrolin_inst[6:0]) 
@@ -22,6 +24,12 @@ always @(*) begin
                 mtvec: csrcontrolout_csr_write_reg = 1'b1;
                 mepc: csrcontrolout_csr_write_reg = 1'b1;
                 mstatus: csrcontrolout_csr_write_reg = 1'b1;
+                stvec: csrcontrolout_csr_write_reg = 1'b1;
+                sepc: csrcontrolout_csr_write_reg = 1'b1;
+                sstatus: csrcontrolout_csr_write_reg = 1'b1;
+                satp: csrcontrolout_csr_write_reg = 1'b1;
+                mcause: csrcontrolout_csr_write_reg = 1'b1;
+                scause: csrcontrolout_csr_write_reg = 1'b1;
                 12'b0: 
                     if (csrcontrolin_inst == 32'h73) begin // ecall
                         csrcontrolout_csr_write_reg = 1'b1; // ecall 当然是允许写入的，因为要写 mepc
@@ -44,11 +52,16 @@ end
 always @(*) begin
     case(csrcontrolin_inst[31:0]) 
         32'h30200073: csrcontrolout_mem_is_mret_reg = 1'b1; // mret
-        default: csrcontrolout_mem_is_mret_reg = 1'b0;
+        32'h10200073: csrcontrolout_mem_is_sret_reg = 1'b1; // sret
+        default: begin
+            csrcontrolout_mem_is_mret_reg = 1'b0;
+            csrcontrolout_mem_is_sret_reg = 1'b0;
+        end
     endcase
 end
 
 assign csrcontrolout_csr_write = csrcontrolout_csr_write_reg;
 assign csrcontrolout_mem_is_mret = csrcontrolout_mem_is_mret_reg;
+assign csrcontrolout_mem_is_sret = csrcontrolout_mem_is_sret_reg;
 
 endmodule

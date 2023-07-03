@@ -50,10 +50,10 @@ module EXMEMREG(
             exmemout_wb_reg <= 4'b0000;
             exmemout_pc_addr1_reg <= 32'b00000000000000000000000000000000;
             exmemout_mem_alu_result_reg <= 64'b0;
-            exmemout_mem_rs1_data_reg <= 64'b0;;
-            exmemout_mem_rs2_data_reg <= 64'b0;;
+            exmemout_mem_rs1_data_reg <= 64'b0;
+            exmemout_mem_rs2_data_reg <= 64'b0;
             exmemout_mem_rd_addr_reg <= 5'b00000;
-            exmemout_mem_imm_reg <= 64'b0;;
+            exmemout_mem_imm_reg <= 64'b0;
             exmeout_mem_pc_addr0_reg <= 32'b00000000000000000000000000000000;
             exmemout_mem_inst_reg <= 32'h00000013;
             exmeout_mem_zero_reg <= 1'b0;

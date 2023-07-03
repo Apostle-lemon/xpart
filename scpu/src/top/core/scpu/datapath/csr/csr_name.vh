@@ -6,5 +6,10 @@
 parameter mtvec = 12'h305,
           mepc  = 12'h341,
           mstatus = 12'h300,
-          mcause = 12'h342;
+          mcause = 12'h342,
+          stvec = 12'h105,
+          sepc = 12'h141,
+          sstatus = 12'h100,
+          scause = 12'h142,
+          satp = 12'h180;
 //`endif

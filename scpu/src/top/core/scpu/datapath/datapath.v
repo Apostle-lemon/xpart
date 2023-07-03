@@ -68,7 +68,13 @@ wire [31:0] if_inst_modified;
 wire [63:0] datapath_mtvec_data;
 wire [63:0] datapath_mepc_data;
 wire [63:0] datapath_mstatus_data;
+wire [63:0] datapath_stvec_data;
+wire [63:0] datapath_sepc_data;
+wire [63:0] datapath_sstatus_data;
+wire [63:0] datapath_scause_data;
+wire [63:0] datapath_satp_data;
 wire mem_is_mret; // 如果 mem_is_mret，那么 pc 就可以更新为 mepc 了
+wire mem_is_sret;
 PC pc(
     .clk(clk),
     .rst(rst),
@@ -76,14 +82,18 @@ PC pc(
     .cur_inst(if_inst_modified),
     .mtvec_data(datapath_mtvec_data),
     .mepc_data(datapath_mepc_data),
+    .stvec_data(datapath_stvec_data),
+    .sepc_data(datapath_sepc_data),
     .pc_write(pc_write),
     .set_pc_to_mepc(mem_is_mret),
+    .set_pc_to_sepc(mem_is_sret),
     .new_addr(pc_out)
 );
 
 IFINSTMUX if_inst_mux(
     .ifinstin_id_inst_orig(inst_in),
     .ifinstmuxin_mem_is_mret(mem_is_mret),
+    .ifinstmuxin_mem_is_sret(mem_is_sret),
     .ifinstin_mem_is_branch_jump(mem_is_branch_jump),
     .ifinstout_inst_modified(if_inst_modified)
 );
@@ -151,6 +161,7 @@ wire [2:0] id_WB;          // id_WB = { reg_write[2], mem_to_reg[1:0] }
 CONTROL control ( 
     .op_code(id_inst[6:0]),
     .funct3(id_inst[14:12]),
+    .inst(id_inst),
     .funct7_5(id_inst[30]),
 
     .id_ex(id_EX),      // 2'b00 reg[dr]<---ALU_result, 2'b01 reg[dr]<---imm, 2'b10 reg[dr]<---pc+4, 2'b11 reg[dr]<----data memory
@@ -308,11 +319,14 @@ wire csr_write;
 CSR_CONTROL csr_control(
     .csrcontrolin_inst(ex_inst),
     .csrcontrolout_csr_write(csr_write),
-    .csrcontrolout_mem_is_mret(mem_is_mret)
+    .csrcontrolout_mem_is_mret(mem_is_mret),
+    .csrcontrolout_mem_is_sret(mem_is_sret)
 );
 
 // 注意：只有使用 id_inst 才能满足 poseedg clock 的要求
 wire [63:0] datapath_mcause_data;
+
+
 CSR_UNIT csr_unit(
     .csrin_write(csr_write),
     .clk(clk),
@@ -325,7 +339,12 @@ CSR_UNIT csr_unit(
     .mtvec_data(datapath_mtvec_data),
     .mepc_data(datapath_mepc_data),
     .mstatus_data(datapath_mstatus_data),
-    .mcause_data(datapath_mcause_data)
+    .mcause_data(datapath_mcause_data),
+    .stvec_data(datapath_stvec_data),
+    .sepc_data(datapath_sepc_data),
+    .sstatus_data(datapath_sstatus_data),
+    .scause_data(datapath_scause_data),
+    .satp_data(datapath_satp_data)
 );
 
 //               __________                       .___

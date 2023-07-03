@@ -5,8 +5,11 @@ module PC(
     input [31:0] cur_inst,
     input [63:0] mtvec_data,
     input [63:0] mepc_data,
+    input [63:0] stvec_data,
+    input [63:0] sepc_data,
     input pc_write,
     input set_pc_to_mepc,
+    input set_pc_to_sepc,
     output [31:0] new_addr
 );
 
@@ -24,17 +27,24 @@ module PC(
             if(cur_inst[6:0] == 7'b1101111 || cur_inst[6:0] == 7'b1100111 || cur_inst[6:0] == 7'b1100011) begin
                 addr_reg <= addr_reg;
             end else if(cur_inst == 32'h73) begin // ecall
-                //TODO：
-                addr_reg <= mtvec_data[31:0];
+                //TODO：64 bit
+                //addr_reg <= mtvec_data[31:0];
+                addr_reg <= stvec_data[31:0];
             end else if(cur_inst == 32'hc0001073) begin // unimp
-                addr_reg <= mtvec_data[31:0];
+                // addr_reg <= mtvec_data[31:0];
+                addr_reg <= stvec_data[31:0];
             end else if(cur_inst == 32'h30200073) begin // mret
                 addr_reg <= addr_reg; 
                 // 如果当前取到的是 mret，那么就不要改变 pc 的值
+            end else if(cur_inst == 32'h10200073) begin // sret
+                addr_reg <= addr_reg; 
+                // 如果当前取到的是 sret，那么就不要改变 pc 的值
             end else if (set_pc_to_mepc) begin // 如果设置了 set_pc_to_mepc，那么就将 pc 设置为 mepc
-                //TODO:
+                //TODO: 64 bit
                 addr_reg <= mepc_data[31:0];
-            end  else if (pc_write) begin
+            end else if (set_pc_to_sepc) begin // 如果设置了 set_pc_to_sepc，那么就将 pc 设置为 sepc
+                addr_reg <= sepc_data[31:0];
+            end else if (pc_write) begin
                 addr_reg <= addr;
             end else begin
                 addr_reg <= addr_reg;
