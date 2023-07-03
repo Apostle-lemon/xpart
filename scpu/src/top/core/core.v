@@ -15,8 +15,13 @@ module Core(
     output wire [31:0] chip_debug_out0, // pc
     output wire [31:0] chip_debug_out1, // addr_out, 是写入内存的地址
     output wire [31:0] chip_debug_out2, // the register data of reg[debug_reg_addr], that is 寄存器数�?
-    output wire [31:0] chip_debug_out3  // the instruction of the current pc
-    
+    output wire [31:0] chip_debug_out3,  // the instruction of the current pc
+
+    output VGA_HS_O,
+    output VGA_VS_O,
+    output [3:0] VGA_R,
+    output [3:0] VGA_G,
+    output [3:0] VGA_B
 );
     wire rst, mem_write, mem_clk, cpu_clk;
     wire [31:0] inst;
@@ -80,9 +85,22 @@ module Core(
         .read_data(core_data_in) // 数据输出
     );
 
+    vga_top lemon_vga_top(
+        .CLK50MHZ(clk),
+        .CPU_RESETN(aresetn),
+
+        .VGA_HS_O(VGA_HS_O),
+        .VGA_VS_O(VGA_VS_O),
+        .VGA_R(VGA_R),
+        .VGA_G(VGA_G),
+        .VGA_B(VGA_B)
+    );
+
     assign chip_debug_out0 = pc_out;
     assign chip_debug_out1 = addr_out;
     assign chip_debug_out2 = debug_reg_data;
     assign chip_debug_out3 = inst;
+
+
 
 endmodule

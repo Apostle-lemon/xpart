@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="5615843fs"></ZoomStartTime>
-      <ZoomEndTime time="5965197fs"></ZoomEndTime>
-      <Cursor1Time time="5678125fs"></Cursor1Time>
+      <ZoomStartTime time="660191fs"></ZoomStartTime>
+      <ZoomEndTime time="1067962fs"></ZoomEndTime>
+      <Cursor1Time time="1000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="290"></NameColumnWidth>
-      <ValueColumnWidth column_width="108"></ValueColumnWidth>
+      <ValueColumnWidth column_width="103"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="26" />
+   <WVObjectSize size="29" />
    <wave_markers>
       <marker time="9380000" label="" />
       <marker time="9420000" label="" />
@@ -114,7 +114,6 @@
    <wvobject fp_name="/Core_tb/uut/cpu/datapath/regs/registers" type="array">
       <obj_property name="ElementShortName">registers[1:31][63:0]</obj_property>
       <obj_property name="ObjectShortName">registers[1:31][63:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="group103" type="group">
       <obj_property name="label">ex_mux_rs1</obj_property>
@@ -331,5 +330,17 @@
          <obj_property name="ElementShortName">addr_reg[31:0]</obj_property>
          <obj_property name="ObjectShortName">addr_reg[31:0]</obj_property>
       </wvobject>
+   </wvobject>
+   <wvobject fp_name="/Core_tb/uut/lemon_vga_top/u_rgb_out/row1" type="array">
+      <obj_property name="ElementShortName">row1[639:0][69:0]</obj_property>
+      <obj_property name="ObjectShortName">row1[639:0][69:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Core_tb/uut/lemon_vga_top/u_rgb_out/row2" type="array">
+      <obj_property name="ElementShortName">row2[639:0][69:0]</obj_property>
+      <obj_property name="ObjectShortName">row2[639:0][69:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Core_tb/uut/lemon_vga_top/u_rgb_out/row3" type="array">
+      <obj_property name="ElementShortName">row3[639:0][69:0]</obj_property>
+      <obj_property name="ObjectShortName">row3[639:0][69:0]</obj_property>
    </wvobject>
 </wave_config>

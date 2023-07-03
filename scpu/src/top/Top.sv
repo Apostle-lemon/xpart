@@ -10,7 +10,13 @@ module Top(
     output [ 2:0]  rgb1,
     output [ 2:0]  rgb2,
     output [ 7:0]  num_csn,
-    output [ 7:0]  num_an
+    output [ 7:0]  num_an,
+
+    output VGA_HS_O,
+    output VGA_VS_O,
+    output [3:0] VGA_R,
+    output [3:0] VGA_G,
+    output [3:0] VGA_B
 );
     logic aresetn;
     logic step;
@@ -38,7 +44,13 @@ module Top(
         .chip_debug_out0(chip_debug_out0),
         .chip_debug_out1(chip_debug_out1),
         .chip_debug_out2(chip_debug_out2),
-        .chip_debug_out3(chip_debug_out3)
+        .chip_debug_out3(chip_debug_out3),
+
+        .VGA_HS_O(VGA_HS_O),
+        .VGA_VS_O(VGA_VS_O),
+        .VGA_R(VGA_R),
+        .VGA_G(VGA_G),
+        .VGA_B(VGA_B)
     );
 
     IO_Manager io_manager_inst(

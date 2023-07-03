@@ -1,0 +1,220 @@
+
+*** Running vivado
+    with args -log Top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
+
+
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source Top.tcl -notrace
+Command: synth_design -top Top -part xc7a100tcsg324-3 -flatten_hierarchy none -directive RuntimeOptimized -fsm_extraction off
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 5284
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1096.852 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Top' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/Top.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'Core' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/core.v:3]
+INFO: [Synth 8-6157] synthesizing module 'SCPU' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/SCPU.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Datapath' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/datapath.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ADD' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/add.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'ADD' (1#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/add.v:2]
+INFO: [Synth 8-6157] synthesizing module 'PC_BRANCH_MUX' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/pc_branch_mux.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'PC_BRANCH_MUX' (2#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/pc_branch_mux.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MUX2T1_32' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/MUX2T1_32.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'MUX2T1_32' (3#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/MUX2T1_32.v:4]
+INFO: [Synth 8-6157] synthesizing module 'PC' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/pc.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'PC' (4#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/pc.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IFINSTMUX' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/if_inst_mux.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'IFINSTMUX' (5#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/if_inst_mux.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IFIDREG' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/regs/ifidreg.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'IFIDREG' (6#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/regs/ifidreg.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ID_INST_MUX' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/id_inst_mux.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ID_INST_MUX' (7#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/id_inst_mux.v:1]
+INFO: [Synth 8-6157] synthesizing module 'CONTROL' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/control/Control.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'CONTROL' (8#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/control/Control.v:3]
+INFO: [Synth 8-6157] synthesizing module 'RAW_HAZARD_UNIT' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/raw_hazard_unit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'RAW_HAZARD_UNIT' (9#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/raw_hazard_unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ID_IDEX_SIGNAL' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/id_idex_signal.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ID_IDEX_SIGNAL' (10#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/id_idex_signal.v:1]
+INFO: [Synth 8-6157] synthesizing module 'REGS' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/registers.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'REGS' (11#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/registers.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ImmGen' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/imm_gen.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'ImmGen' (12#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/imm_gen.v:2]
+INFO: [Synth 8-6157] synthesizing module 'ALUOP' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/alu_op.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ALUOP' (13#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/alu_op.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IDEXREG' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/regs/idexreg.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'IDEXREG' (14#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/regs/idexreg.v:1]
+INFO: [Synth 8-6157] synthesizing module 'CSR_FORWARDING_UNIT' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_forwarding_unit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'CSR_FORWARDING_UNIT' (15#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_forwarding_unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'CSR_SOURCE_MUX' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_source_mux.v:1]
+INFO: [Synth 8-226] default block is never used [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_source_mux.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'CSR_SOURCE_MUX' (16#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_source_mux.v:1]
+INFO: [Synth 8-6157] synthesizing module 'CSR_EX_UNIT' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_ex_unit.v:1]
+	Parameter mtvec bound to: 12'b001100000101 
+	Parameter mepc bound to: 12'b001101000001 
+	Parameter mstatus bound to: 12'b001100000000 
+	Parameter mcause bound to: 12'b001101000010 
+	Parameter stvec bound to: 12'b000100000101 
+	Parameter sepc bound to: 12'b000101000001 
+	Parameter sstatus bound to: 12'b000100000000 
+	Parameter scause bound to: 12'b000101000010 
+	Parameter satp bound to: 12'b000110000000 
+INFO: [Synth 8-6155] done synthesizing module 'CSR_EX_UNIT' (17#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_ex_unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'CSR_CONTROL' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_control.v:1]
+	Parameter mtvec bound to: 12'b001100000101 
+	Parameter mepc bound to: 12'b001101000001 
+	Parameter mstatus bound to: 12'b001100000000 
+	Parameter mcause bound to: 12'b001101000010 
+	Parameter stvec bound to: 12'b000100000101 
+	Parameter sepc bound to: 12'b000101000001 
+	Parameter sstatus bound to: 12'b000100000000 
+	Parameter scause bound to: 12'b000101000010 
+	Parameter satp bound to: 12'b000110000000 
+INFO: [Synth 8-6155] done synthesizing module 'CSR_CONTROL' (18#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_control.v:1]
+INFO: [Synth 8-6157] synthesizing module 'CSR_UNIT' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_unit.v:1]
+	Parameter mtvec bound to: 12'b001100000101 
+	Parameter mepc bound to: 12'b001101000001 
+	Parameter mstatus bound to: 12'b001100000000 
+	Parameter mcause bound to: 12'b001101000010 
+	Parameter stvec bound to: 12'b000100000101 
+	Parameter sepc bound to: 12'b000101000001 
+	Parameter sstatus bound to: 12'b000100000000 
+	Parameter scause bound to: 12'b000101000010 
+	Parameter satp bound to: 12'b000110000000 
+INFO: [Synth 8-6155] done synthesizing module 'CSR_UNIT' (19#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'EXADD' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/ex_add.v:1]
+INFO: [Synth 8-6157] synthesizing module 'SHEFT_LEFT1' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/sheft_left1.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'SHEFT_LEFT1' (20#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/sheft_left1.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'EXADD' (21#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/ex_add.v:1]
+INFO: [Synth 8-6157] synthesizing module 'BRANCH_JUMP_DETECT' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/branch_jump_detect.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'BRANCH_JUMP_DETECT' (22#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/branch_jump_detect.v:1]
+INFO: [Synth 8-6157] synthesizing module 'FORWARDING_UNIT' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/forwarding_unit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'FORWARDING_UNIT' (23#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/forwarding_unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MUX4T1_64' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/MUX4T1_64.v:3]
+INFO: [Synth 8-226] default block is never used [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/MUX4T1_64.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'MUX4T1_64' (24#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/MUX4T1_64.v:3]
+INFO: [Synth 8-6157] synthesizing module 'MUX2T1_64' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/MUX2T1_64.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'MUX2T1_64' (25#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/MUX2T1_64.v:4]
+INFO: [Synth 8-6157] synthesizing module 'ALUCONTROL' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/alu_control.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'ALUCONTROL' (26#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/alu_control.v:4]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/alu.v:2]
+	Parameter ADD bound to: 4'b0000 
+	Parameter SUB bound to: 4'b1000 
+	Parameter SLL bound to: 4'b0001 
+	Parameter SLT bound to: 4'b0010 
+	Parameter SLTU bound to: 4'b0011 
+	Parameter XOR bound to: 4'b0100 
+	Parameter SRL bound to: 4'b0101 
+	Parameter SRA bound to: 4'b1101 
+	Parameter OR bound to: 4'b0110 
+	Parameter AND bound to: 4'b0111 
+	Parameter ADDW bound to: 4'b1000 
+	Parameter ADDIW bound to: 4'b1000 
+WARNING: [Synth 8-151] case item 4'b1000 is unreachable [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/alu.v:36]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (27#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/alu.v:2]
+INFO: [Synth 8-6157] synthesizing module 'EXMEMREG' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/regs/exmemreg.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'EXMEMREG' (28#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/regs/exmemreg.v:1]
+INFO: [Synth 8-6157] synthesizing module 'PCSRC1GEN' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/pc_src1_gen.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'PCSRC1GEN' (29#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/pc_src1_gen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'PCSRC0GEN' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/pc_src0_gen.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'PCSRC0GEN' (30#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/pc_src0_gen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MEMWBREG' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/regs/memwbreg.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MEMWBREG' (31#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/regs/memwbreg.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Datapath' (32#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/datapath.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'SCPU' (33#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/SCPU.v:3]
+INFO: [Synth 8-6157] synthesizing module 'myRom' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/rom/myRom.v:3]
+	Parameter FILE_PATH bound to: C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/rom/kernel_normal.sim - type: string 
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/rom/kernel_normal.sim' is read successfully [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/rom/myRom.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'myRom' (34#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/rom/myRom.v:3]
+WARNING: [Synth 8-689] width (32) of port connection 'address' does not match port width (11) of module 'myRom' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/core.v:74]
+INFO: [Synth 8-6157] synthesizing module 'myRam' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/ram/myRam.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'myRam' (35#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/ram/myRam.v:3]
+WARNING: [Synth 8-689] width (11) of port connection 'address' does not match port width (10) of module 'myRam' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/core.v:84]
+INFO: [Synth 8-6157] synthesizing module 'vga_top' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'vga_sync' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_sync.v:3]
+	Parameter HD bound to: 640 - type: integer 
+	Parameter HB bound to: 16 - type: integer 
+	Parameter HR bound to: 96 - type: integer 
+	Parameter HF bound to: 48 - type: integer 
+	Parameter VD bound to: 480 - type: integer 
+	Parameter VB bound to: 33 - type: integer 
+	Parameter VR bound to: 2 - type: integer 
+	Parameter VF bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'counter_mod_m' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/counter_mod_m.v:3]
+	Parameter N bound to: 2 - type: integer 
+	Parameter M bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'counter_mod_m' (36#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/counter_mod_m.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'vga_sync' (37#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_sync.v:3]
+INFO: [Synth 8-6157] synthesizing module 'vga_gen_grafic' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_gen_grafic.v:3]
+	Parameter LEFT_BOUND bound to: 4 - type: integer 
+	Parameter RIGHT_BOUND bound to: 783 - type: integer 
+	Parameter left_pos bound to: 144 - type: integer 
+	Parameter right_pos bound to: 783 - type: integer 
+	Parameter up_pos_row1 bound to: 31 - type: integer 
+	Parameter down_pos_row1 bound to: 100 - type: integer 
+	Parameter up_pos_row2 bound to: 111 - type: integer 
+	Parameter down_pos_row2 bound to: 180 - type: integer 
+	Parameter up_pos_row3 bound to: 191 - type: integer 
+	Parameter down_pos_row3 bound to: 260 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'vga_gen_col' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_gen_col.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'vga_gen_col' (38#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_gen_col.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'vga_gen_grafic' (39#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_gen_grafic.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'vga_top' (40#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_top.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Core' (41#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/core.v:3]
+INFO: [Synth 8-6157] synthesizing module 'IO_Manager' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/io_manager/IO_Manager.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'counter' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/io_manager/IO_Manager.sv:245]
+INFO: [Synth 8-6155] done synthesizing module 'counter' (42#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/io_manager/IO_Manager.sv:245]
+INFO: [Synth 8-6157] synthesizing module 'button_debouncer' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/io_manager/IO_Manager.sv:160]
+INFO: [Synth 8-6155] done synthesizing module 'button_debouncer' (43#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/io_manager/IO_Manager.sv:160]
+INFO: [Synth 8-6157] synthesizing module 'hex_to_shape' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/io_manager/IO_Manager.sv:185]
+INFO: [Synth 8-6155] done synthesizing module 'hex_to_shape' (44#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/io_manager/IO_Manager.sv:185]
+INFO: [Synth 8-6157] synthesizing module 'segnum_manager' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/io_manager/IO_Manager.sv:213]
+INFO: [Synth 8-6155] done synthesizing module 'segnum_manager' (45#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/io_manager/IO_Manager.sv:213]
+INFO: [Synth 8-6155] done synthesizing module 'IO_Manager' (46#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/io_manager/IO_Manager.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'Top' (47#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/Top.sv:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:01:47 ; elapsed = 00:03:06 . Memory (MB): peak = 6335.762 ; gain = 5238.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:52 ; elapsed = 00:03:17 . Memory (MB): peak = 6335.762 ; gain = 5238.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:52 ; elapsed = 00:03:17 . Memory (MB): peak = 6335.762 ; gain = 5238.910
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 6335.762 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/constrs/nexys_a7.xdc]
+Finished Parsing XDC File [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/constrs/nexys_a7.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/constrs/nexys_a7.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 6335.762 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 6335.762 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:02:28 ; elapsed = 00:04:26 . Memory (MB): peak = 6335.762 ; gain = 5238.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:02:28 ; elapsed = 00:04:26 . Memory (MB): peak = 6335.762 ; gain = 5238.910

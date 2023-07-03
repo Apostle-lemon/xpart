@@ -11,6 +11,7 @@ verilog xil_defaultlib  --include "../../../../../scpu/src/top/core/scpu/datapat
 "../../../../../scpu/src/top/core/scpu/datapath/app/alu_op.v" \
 "../../../../../scpu/src/top/core/scpu/datapath/app/branch_jump_detect.v" \
 "../../../../../scpu/src/top/core/core.v" \
+"../../../../../scpu/src/vga/counter_mod_m.v" \
 "../../../../../scpu/src/top/core/scpu/datapath/csr/csr_control.v" \
 "../../../../../scpu/src/top/core/scpu/datapath/csr/csr_ex_unit.v" \
 "../../../../../scpu/src/top/core/scpu/datapath/csr/csr_forwarding_unit.v" \
@@ -36,6 +37,10 @@ verilog xil_defaultlib  --include "../../../../../scpu/src/top/core/scpu/datapat
 "../../../../../scpu/src/top/core/scpu/datapath/app/raw_hazard_unit.v" \
 "../../../../../scpu/src/top/core/scpu/datapath/app/registers.v" \
 "../../../../../scpu/src/top/core/scpu/datapath/app/sheft_left1.v" \
+"../../../../../scpu/src/vga/vga_gen_col.v" \
+"../../../../../scpu/src/vga/vga_gen_grafic.v" \
+"../../../../../scpu/src/vga/vga_sync.v" \
+"../../../../../scpu/src/vga/vga_top.v" \
 
 sv xil_defaultlib  --include "../../../../../scpu/src/top/core/scpu/datapath/app" --include "../../../../../scpu/src/top/core/scpu/datapath/csr" \
 "../../../../../scpu/test_bench/Core_tb.sv" \

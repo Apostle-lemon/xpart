@@ -1,0 +1,360 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Jul  3 15:58:02 2023
+# Process ID: 43444
+# Current directory: C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26708 C:\Users\ethereal\Desktop\university\3-00ZJUcourse\computer_systemIII\xpart\xpart\xpart.xpr
+# Log file: C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/vivado.log
+# Journal file: C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart'
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.srcs/sources_1'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/20201/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1093.676 ; gain = 0.000
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Mon Jul  3 16:02:19 2023] Launched synth_1...
+Run output will be captured here: C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.runs/synth_1/runme.log
+[Mon Jul  3 16:02:19 2023] Launched impl_1...
+Run output will be captured here: C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.runs/impl_1/runme.log
+add_files {C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_sync.v C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_gen_grafic.v C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_gen_col.v C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_top.v C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/counter_mod_m.v}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.runs/synth_1
+
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Core_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Core_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/control/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CONTROL
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/MUX2T1_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX2T1_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/MUX2T1_64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX2T1_64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/MUX4T1_64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX4T1_64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/SCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADD
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/alu_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUCONTROL
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/alu_op.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/branch_jump_detect.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BRANCH_JUMP_DETECT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Core
+ERROR: [VRFC 10-1247] port connections cannot be mixed ordered and named [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/core.v:88]
+ERROR: [VRFC 10-2865] module 'Core' ignored due to previous errors [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/core.v:3]
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Core_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Core_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/control/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CONTROL
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/MUX2T1_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX2T1_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/MUX2T1_64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX2T1_64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/MUX4T1_64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX4T1_64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/SCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADD
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/alu_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUCONTROL
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/alu_op.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/branch_jump_detect.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BRANCH_JUMP_DETECT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Core
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/counter_mod_m.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter_mod_m
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR_CONTROL
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_ex_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR_EX_UNIT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_forwarding_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR_FORWARDING_UNIT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_source_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR_SOURCE_MUX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR_UNIT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2458] undeclared symbol ex_is_mret, assumed default net type wire [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/datapath.v:139]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/ex_add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EXADD
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/regs/exmemreg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EXMEMREG
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/forwarding_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FORWARDING_UNIT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/id_idex_signal.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_IDEX_SIGNAL
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/id_inst_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_INST_MUX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/regs/idexreg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IDEXREG
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/if_inst_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFINSTMUX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/regs/ifidreg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFIDREG
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/imm_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/regs/memwbreg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEMWBREG
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/ram/myRam.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myRam
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/rom/myRom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myRom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/pc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/pc_branch_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC_BRANCH_MUX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/pc_src0_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCSRC0GEN
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/pc_src1_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCSRC1GEN
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/raw_hazard_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAW_HAZARD_UNIT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REGS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/sheft_left1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SHEFT_LEFT1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_gen_col.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_gen_col
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_gen_grafic.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_gen_grafic
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_top
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1096.543 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '8' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.sim/sim_1/behav/xsim'
+"xelab -wto 8bc4e36ae31644abab61313172f33358 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Core_tb_behav xil_defaultlib.Core_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/20201/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 8bc4e36ae31644abab61313172f33358 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Core_tb_behav xil_defaultlib.Core_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 11 for port 'address' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/core.v:74]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ADD
+Compiling module xil_defaultlib.PC_BRANCH_MUX
+Compiling module xil_defaultlib.MUX2T1_32
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IFINSTMUX
+Compiling module xil_defaultlib.IFIDREG
+Compiling module xil_defaultlib.ID_INST_MUX
+Compiling module xil_defaultlib.CONTROL
+Compiling module xil_defaultlib.RAW_HAZARD_UNIT
+Compiling module xil_defaultlib.ID_IDEX_SIGNAL
+Compiling module xil_defaultlib.REGS
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.ALUOP
+Compiling module xil_defaultlib.IDEXREG
+Compiling module xil_defaultlib.CSR_FORWARDING_UNIT
+Compiling module xil_defaultlib.CSR_SOURCE_MUX
+Compiling module xil_defaultlib.CSR_EX_UNIT
+Compiling module xil_defaultlib.CSR_CONTROL
+Compiling module xil_defaultlib.CSR_UNIT
+Compiling module xil_defaultlib.SHEFT_LEFT1
+Compiling module xil_defaultlib.EXADD
+Compiling module xil_defaultlib.BRANCH_JUMP_DETECT
+Compiling module xil_defaultlib.FORWARDING_UNIT
+Compiling module xil_defaultlib.MUX4T1_64
+Compiling module xil_defaultlib.MUX2T1_64
+Compiling module xil_defaultlib.ALUCONTROL
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EXMEMREG
+Compiling module xil_defaultlib.PCSRC1GEN
+Compiling module xil_defaultlib.PCSRC0GEN
+Compiling module xil_defaultlib.MEMWBREG
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.SCPU
+Compiling module xil_defaultlib.myRom
+Compiling module xil_defaultlib.myRam
+Compiling module xil_defaultlib.counter_mod_m(N=2,M=4)
+Compiling module xil_defaultlib.vga_sync
+Compiling module xil_defaultlib.vga_gen_col
+Compiling module xil_defaultlib.vga_gen_grafic
+Compiling module xil_defaultlib.vga_top
+Compiling module xil_defaultlib.Core
+Compiling module xil_defaultlib.Core_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Core_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1096.543 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Core_tb_behav -key {Behavioral:sim_1:Functional:Core_tb} -tclbatch {Core_tb.tcl} -view {C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/Core_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+open_wave_config C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/Core_tb_behav.wcfg
+source Core_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1096.543 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Core_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:21 . Memory (MB): peak = 1096.543 ; gain = 0.000
+open_wave_config {C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/simulation.wcfg}
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Core_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Core_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/counter_mod_m.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter_mod_m
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_gen_col.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_gen_col
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_gen_grafic.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_gen_grafic
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_top
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.sim/sim_1/behav/xsim'
+"xelab -wto 8bc4e36ae31644abab61313172f33358 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Core_tb_behav xil_defaultlib.Core_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/20201/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 8bc4e36ae31644abab61313172f33358 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Core_tb_behav xil_defaultlib.Core_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 11 for port 'address' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/core.v:74]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ADD
+Compiling module xil_defaultlib.PC_BRANCH_MUX
+Compiling module xil_defaultlib.MUX2T1_32
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IFINSTMUX
+Compiling module xil_defaultlib.IFIDREG
+Compiling module xil_defaultlib.ID_INST_MUX
+Compiling module xil_defaultlib.CONTROL
+Compiling module xil_defaultlib.RAW_HAZARD_UNIT
+Compiling module xil_defaultlib.ID_IDEX_SIGNAL
+Compiling module xil_defaultlib.REGS
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.ALUOP
+Compiling module xil_defaultlib.IDEXREG
+Compiling module xil_defaultlib.CSR_FORWARDING_UNIT
+Compiling module xil_defaultlib.CSR_SOURCE_MUX
+Compiling module xil_defaultlib.CSR_EX_UNIT
+Compiling module xil_defaultlib.CSR_CONTROL
+Compiling module xil_defaultlib.CSR_UNIT
+Compiling module xil_defaultlib.SHEFT_LEFT1
+Compiling module xil_defaultlib.EXADD
+Compiling module xil_defaultlib.BRANCH_JUMP_DETECT
+Compiling module xil_defaultlib.FORWARDING_UNIT
+Compiling module xil_defaultlib.MUX4T1_64
+Compiling module xil_defaultlib.MUX2T1_64
+Compiling module xil_defaultlib.ALUCONTROL
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EXMEMREG
+Compiling module xil_defaultlib.PCSRC1GEN
+Compiling module xil_defaultlib.PCSRC0GEN
+Compiling module xil_defaultlib.MEMWBREG
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.SCPU
+Compiling module xil_defaultlib.myRom
+Compiling module xil_defaultlib.myRam
+Compiling module xil_defaultlib.counter_mod_m(N=2,M=4)
+Compiling module xil_defaultlib.vga_sync
+Compiling module xil_defaultlib.vga_gen_col
+Compiling module xil_defaultlib.vga_gen_grafic
+Compiling module xil_defaultlib.vga_top
+Compiling module xil_defaultlib.Core
+Compiling module xil_defaultlib.Core_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Core_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1096.543 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1096.543 ; gain = 0.000
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 1096.543 ; gain = 0.000
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Mon Jul  3 16:25:50 2023] Launched synth_1...
+Run output will be captured here: C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.runs/synth_1/runme.log
+[Mon Jul  3 16:25:50 2023] Launched impl_1...
+Run output will be captured here: C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Mon Jul  3 19:16:09 2023] Launched synth_1...
+Run output will be captured here: C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.runs/synth_1/runme.log
+[Mon Jul  3 19:16:09 2023] Launched impl_1...
+Run output will be captured here: C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.runs/synth_1
+
+save_wave_config {C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/simulation.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Jul  3 19:21:00 2023...
