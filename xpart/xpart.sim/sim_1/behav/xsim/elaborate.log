@@ -4,7 +4,7 @@ Running: C:/20201/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 8bc4e36ae31
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 11 for port 'address' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/core.v:74]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 11 for port 'address' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/core.v:75]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -49,6 +49,7 @@ Compiling module xil_defaultlib.vga_sync
 Compiling module xil_defaultlib.vga_gen_col
 Compiling module xil_defaultlib.vga_gen_grafic
 Compiling module xil_defaultlib.vga_top
+Compiling module xil_defaultlib.vga_dma
 Compiling module xil_defaultlib.Core
 Compiling module xil_defaultlib.Core_tb
 Compiling module xil_defaultlib.glbl

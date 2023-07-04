@@ -58,6 +58,7 @@ module vga_gen_grafic(
 	parameter START_DISPLAY_COLUMN = 5;
 	parameter INTERNAL_SPACE = 3;
 
+	// parameter LEFT_BOUND = 4;
 	parameter LEFT_BOUND = 4;
 	parameter RIGHT_BOUND = 783;
     
@@ -521,7 +522,7 @@ integer offset;
 			vga_b <= 0;
 		end
 		else 
-            if (pixel_x>=LEFT_BOUND) begin // && pixel_x<=RIGHT_BOUND && pixel_y>=UP_BOUND && pixel_y<=DOWN_BOUND) begin // 如果是在显示区域
+            if (pixel_x>=LEFT_BOUND && pixel_x <= RIGHT_BOUND) begin // && pixel_x<=RIGHT_BOUND && pixel_y>=UP_BOUND && pixel_y<=DOWN_BOUND) begin // 如果是在显示区域
                 if (pixel_y>=up_pos_row1 && pixel_y<=down_pos_row1) begin
                     temp = pixel_x - START_DISPLAY_COLUMN;
 					current_char = temp / (INTERNAL_SPACE + 50);
@@ -599,11 +600,13 @@ integer offset;
                     vga_b <= 3'b000;
                 end
             end
+
             else begin
                 vga_r <= 3'b000;
                 vga_g <= 3'b000;
                 vga_b <= 3'b000;
             end
+	
 	end
 
 endmodule

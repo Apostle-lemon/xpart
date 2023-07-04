@@ -86,10 +86,11 @@ module Core(
         .read_data(core_data_in) // 数据输出
     );
 
-    vga_top lemon_vga_top(
-        .CLK50MHZ(clk),
-        .CPU_RESETN(aresetn),
-
+    vga_dma lemon_vga_dma(
+        .clk(clk),
+        .aresetn(aresetn),
+        .cpu_addr_out(addr_out),
+        .vga_dma_data_in(core_data_out),
         .VGA_HS_O(VGA_HS_O),
         .VGA_VS_O(VGA_VS_O),
         .VGA_R(VGA_R),

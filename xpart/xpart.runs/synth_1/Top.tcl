@@ -132,6 +132,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/raw_hazard_unit.v
   C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/registers.v
   C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/sheft_left1.v
+  C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_dma.v
   C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_gen_col.v
   C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_gen_grafic.v
   C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_sync.v
