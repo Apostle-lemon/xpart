@@ -15,13 +15,13 @@ module ID_IDEX_SIGNAL(
 
     always @(*) begin 
         if (ididexsignalin_idex_zero == 1'b1) begin
-            idex_EX_reg <= 5'b00000;
-            idex_M_reg <= 3'b000;
-            idex_WB_reg <= 3'b000;
+            idex_EX_reg = 5'b00000;
+            idex_M_reg = 3'b000;
+            idex_WB_reg = 3'b000;
         end else begin
-            idex_EX_reg <= ididexsignalin_id_EX;
-            idex_M_reg <= ididexsignalin_id_M;
-            idex_WB_reg <= ididexsignalin_id_WB;
+            idex_EX_reg = ididexsignalin_id_EX;
+            idex_M_reg = ididexsignalin_id_M;
+            idex_WB_reg = ididexsignalin_id_WB;
         end 
     end
 

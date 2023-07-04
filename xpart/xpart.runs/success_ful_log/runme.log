@@ -1,0 +1,262 @@
+
+*** Running vivado
+    with args -log Top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Top.tcl -notrace
+
+
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source Top.tcl -notrace
+Command: link_design -top Top -part xc7a100tcsg324-3
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 1096.879 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 37898 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/constrs/nexys_a7.xdc]
+Finished Parsing XDC File [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/constrs/nexys_a7.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1218.754 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+7 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 1218.754 ; gain = 121.875
+Command: opt_design -directive RuntimeOptimized
+INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: RuntimeOptimized
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1219.863 ; gain = 1.109
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 5 inverter(s) to 8303 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: fc7adeed
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:53 . Memory (MB): peak = 2028.988 ; gain = 634.070
+INFO: [Opt 31-389] Phase Retarget created 34777 cells and removed 58043 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 18a796ee3
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:01:03 . Memory (MB): peak = 2028.988 ; gain = 634.070
+INFO: [Opt 31-389] Phase Constant propagation created 4982 cells and removed 23661 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 15b75e4a3
+
+Time (s): cpu = 00:00:53 ; elapsed = 00:01:06 . Memory (MB): peak = 2028.988 ; gain = 634.070
+INFO: [Opt 31-389] Phase Sweep created 6 cells and removed 17 cells
+
+Phase 4 BUFG optimization
+INFO: [Opt 31-194] Inserted BUFG chip_inst/clk_div_reg[0]_BUFG_inst to drive 8258 load(s) on clock net chip_inst/clk_div_reg_BUFG[0]
+INFO: [Opt 31-194] Inserted BUFG chip_inst/cpu_clk_BUFG_inst to drive 3514 load(s) on clock net chip_inst/cpu_clk_BUFG
+INFO: [Opt 31-193] Inserted 2 BUFG(s) on clock nets
+Phase 4 BUFG optimization | Checksum: 16493e8f2
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:01:09 . Memory (MB): peak = 2028.988 ; gain = 634.070
+INFO: [Opt 31-662] Phase BUFG optimization created 2 cells of which 2 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 16493e8f2
+
+Time (s): cpu = 00:00:56 ; elapsed = 00:01:11 . Memory (MB): peak = 2028.988 ; gain = 634.070
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: f2a68aae
+
+Time (s): cpu = 00:00:57 ; elapsed = 00:01:12 . Memory (MB): peak = 2028.988 ; gain = 634.070
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |           34777  |           58043  |                                              0  |
+|  Constant propagation         |            4982  |           23661  |                                              0  |
+|  Sweep                        |               6  |              17  |                                              0  |
+|  BUFG optimization            |               2  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.515 . Memory (MB): peak = 2028.988 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 102f29c18
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:01:18 . Memory (MB): peak = 2028.988 ; gain = 634.070
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 2028.988 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 102f29c18
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 2028.988 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+27 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:01:05 ; elapsed = 00:01:23 . Memory (MB): peak = 2028.988 ; gain = 810.234
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 2028.988 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.runs/impl_1/Top_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2028.988 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_drc -file Top_drc_opted.rpt -pb Top_drc_opted.pb -rpx Top_drc_opted.rpx
+Command: report_drc -file Top_drc_opted.rpt -pb Top_drc_opted.pb -rpx Top_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/20201/Vivado/2020.1/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.runs/impl_1/Top_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2028.988 ; gain = 0.000
+Command: read_checkpoint -incremental C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.srcs/utils_1/imports/synth_1/Top.dcp
+INFO: [Vivado 12-9147] Incremental flow is being run with directive 'RuntimeOptimized'. This will override place_design, post-place phys_opt_design and route_design directives being called in high reuse mode.
+
+Starting Incremental read checkpoint Task
+
+Phase 1 Process Reference Checkpoint Netlist
+INFO: [Netlist 29-17] Analyzing 37898 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2059.898 ; gain = 30.910
+WARNING: [Project 1-471] No reusable place or route information found in incremental checkpoint 'C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.srcs/utils_1/imports/synth_1/Top.dcp'. Incremental flow will be skipped.
+
+Phase 2 Initialization
+WARNING: [Project 1-471] No reusable place or route information found in incremental checkpoint 'C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.srcs/utils_1/imports/synth_1/Top.dcp'. Incremental flow will be skipped.
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2064.922 ; gain = 35.934
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 3 Build Reuse DB
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 2190.961 ; gain = 161.973
+
+Phase 4 Reporting
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Tue Jul  4 00:56:42 2023
+| Host         : DESKTOP-IT8J4BG running 64-bit major release  (build 9200)
+| Design       : Top
+| Device       : xc7a100t
+| Design State : Pre Place
+------------------------------------------------------------------------------------
+
+Incremental Implementation Information
+
+Table of Contents
+-----------------
+1. Incremental Flow Summary
+2. Reference Checkpoint Information
+3. Optimization Comparison With Reference Run
+3.1 iphys_opt_replay Optimizations
+3.2 QoR Suggestion Optimizations
+
+1. Incremental Flow Summary
+---------------------------
+
++-----------------------+------------------+
+|    Flow Information   |       Value      |
++-----------------------+------------------+
+| Synthesis Flow        |          Default |
+| Auto Incremental      |               No |
+| Incremental Directive | RuntimeOptimized |
+| Reuse mode            |              Low |
+| Target WNS            |              N/A |
+| QoR Suggestions       |                0 |
++-----------------------+------------------+
+
+
+2. Reference Checkpoint Information
+-----------------------------------
+
++----------------+------------------------------------------------------------------------------------------------------------------------------+
+| DCP Location:  | C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.srcs/utils_1/imports/synth_1/Top.dcp |
++----------------+------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------+----------------------------+
+|         DCP Information        |            Value           |
++--------------------------------+----------------------------+
+| Vivado Version                 |                     2020.1 |
+| DCP State                      |                    Unknown |
+| Recorded WNS                   |                        N/A |
+| Recorded WHS                   |                        N/A |
+| Incremental Speed File Version | PRODUCTION 1.23 2018-06-13 |
++--------------------------------+----------------------------+
+* Recorded WNS/WHS timing numbers are estimated timing numbers. They may vary slightly from sign-off timing numbers.
+
+
+3. Optimization Comparison With Reference Run
+---------------------------------------------
+
+3.1 iphys_opt_replay Optimizations
+----------------------------------
+
++-------------------------+--------+------------+
+| iphys_opt_design replay | Reused | Not Reused |
++-------------------------+--------+------------+
+
+
+3.2 QoR Suggestion Optimizations
+--------------------------------
+
++-----------------+-------+
+| QoR Suggestions | Value |
++-----------------+-------+
+
+
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 2195.902 ; gain = 166.914
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 2195.902 ; gain = 166.914
+read_checkpoint: Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 2195.902 ; gain = 166.914
+WARNING: [Vivado_Tcl 4-245] Only netlist similarity summary will be reported since 'read_checkpoint -incremental' read in a checkpoint with no place or route information.
+Command: place_design -directive RuntimeOptimized
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+ERROR: [DRC UTLZ-1] Resource utilization: LUT as Logic over-utilized in Top Level Design (This design requires more LUT as Logic cells than are available in the target device. This design requires 72441 of such cell types but only 63400 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device. Please set tcl parameter "drc.disableLUTOverUtilError" to 1 to change this error to warning.)
+ERROR: [DRC UTLZ-1] Resource utilization: Slice LUTs over-utilized in Top Level Design (This design requires more Slice LUTs cells than are available in the target device. This design requires 72441 of such cell types but only 63400 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device. Please set tcl parameter "drc.disableLUTOverUtilError" to 1 to change this error to warning.)
+INFO: [Vivado_Tcl 4-198] DRC finished with 2 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-23] Error(s) found during DRC. Placer not run.
+INFO: [Common 17-83] Releasing license: Implementation
+48 Infos, 3 Warnings, 0 Critical Warnings and 3 Errors encountered.
+place_design failed
+ERROR: [Common 17-39] 'place_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Tue Jul  4 00:56:47 2023...

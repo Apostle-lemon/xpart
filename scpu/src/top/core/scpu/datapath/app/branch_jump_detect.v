@@ -7,13 +7,13 @@ module BRANCH_JUMP_DETECT(
 
     always @(*) begin
         if(branchjumpdetectin_inst[6:0] == 7'b1100011) begin // branch type
-            branchjumpdetect_is_branch_jump_reg <= 1'b1;
+            branchjumpdetect_is_branch_jump_reg = 1'b1;
         end else if(branchjumpdetectin_inst[6:0] == 7'b1101111) begin // jump type
-            branchjumpdetect_is_branch_jump_reg <= 1'b1;
+            branchjumpdetect_is_branch_jump_reg = 1'b1;
         end else if(branchjumpdetectin_inst[6:0] == 7'b1100111) begin // jalr type
-            branchjumpdetect_is_branch_jump_reg <= 1'b1;
+            branchjumpdetect_is_branch_jump_reg = 1'b1;
         end else begin
-            branchjumpdetect_is_branch_jump_reg <= 1'b0;
+            branchjumpdetect_is_branch_jump_reg = 1'b0;
         end
     end
 

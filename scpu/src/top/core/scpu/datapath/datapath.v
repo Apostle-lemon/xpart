@@ -6,7 +6,7 @@ module Datapath(
     input [63:0] data_in,            // data from data memory
 
     // output
-    output [31:0] addr_out,          // data memory address    
+    output [63:0] addr_out,          // data memory address    
     output [63:0] data_out,          // data to data memory
     output [31:0] pc_out,             // program counter
     output [31:0] datapathoutput_mem_inst, 

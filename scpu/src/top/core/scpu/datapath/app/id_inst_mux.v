@@ -12,11 +12,11 @@ module ID_INST_MUX (
     always @(*)
         begin
             if (idpcmuxin_ex_is_branch_jump || idpcmuxin_mem_is_branch_jump)
-                idpcmuxout_id_inst_reg <= 32'h00000013;
+                idpcmuxout_id_inst_reg = 32'h00000013;
             else if(idpcmuxin_ex_is_mret) begin
-                idpcmuxout_id_inst_reg <= 32'h00000013;
+                idpcmuxout_id_inst_reg = 32'h00000013;
             end else begin
-                idpcmuxout_id_inst_reg <= idpcmuxin_id_inst_orig;
+                idpcmuxout_id_inst_reg = idpcmuxin_id_inst_orig;
             end
         end
 

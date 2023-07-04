@@ -13,13 +13,13 @@ module PC_BRANCH_MUX(
     always @(*) begin
         if (branchjumpdetectin_mem_is_branch_jump == 1'b1) begin
             if(sel == 0) begin 
-                pc_new_reg <= pcbranchmuxin_mem_pc_addr0;
+                pc_new_reg = pcbranchmuxin_mem_pc_addr0;
             end else begin
-                pc_new_reg <= pcbranchmuxin_pc_addr1;
+                pc_new_reg = pcbranchmuxin_pc_addr1;
             end
         end 
         else begin
-            pc_new_reg <= pcbranchmuxin_pc_addr0;
+            pc_new_reg = pcbranchmuxin_pc_addr0;
         end
     end
 

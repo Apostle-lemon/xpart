@@ -30,6 +30,7 @@ module ALU(
                     res_reg = {temp_reg[31] == 1 ? 32'hffffffff:32'b0, temp_reg[31:0]};
                 end
                 default : begin
+                    res_reg = 0;
                 end
             endcase
         end else begin

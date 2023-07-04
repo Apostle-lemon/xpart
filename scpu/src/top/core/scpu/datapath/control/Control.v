@@ -105,6 +105,7 @@ module CONTROL(
         7'b1110011: begin
           reg_write_reg = 1'b1; // write_enable
           mem_to_reg_reg = 2'b00; // from alu_result
+          alu_op_reg = 4'b0000;
         end
         // addw
         7'b0111011: begin

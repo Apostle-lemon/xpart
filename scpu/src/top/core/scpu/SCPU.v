@@ -8,7 +8,7 @@ module SCPU(
     input [4:0] debug_reg_addr,
 
     // outputs
-    output [31:0] addr_out, // data memory address
+    output [63:0] addr_out, // data memory address
     output [63:0] data_out, // data to data memory
     output [31:0] pc_out,   // connect to instruction memory
     output [31:0] scpu_output_mem_inst,

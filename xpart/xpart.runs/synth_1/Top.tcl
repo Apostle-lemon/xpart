@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-3
 
@@ -148,10 +150,12 @@ read_xdc C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/x
 set_property used_in_implementation false [get_files C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/constrs/nexys_a7.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -incremental C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.srcs/utils_1/imports/synth_1/Top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top Top -part xc7a100tcsg324-3 -flatten_hierarchy none -directive RuntimeOptimized -fsm_extraction off
+synth_design -top Top -part xc7a100tcsg324-3
 OPTRACE "synth_design" END { }
 
 

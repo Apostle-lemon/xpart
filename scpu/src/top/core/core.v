@@ -26,7 +26,8 @@ module Core(
     wire rst, mem_write, mem_clk, cpu_clk;
     wire [31:0] inst;
 
-    wire [31:0] addr_out, pc_out;
+    wire [63:0] addr_out;
+    wire [31:0] pc_out;
     wire [63:0] core_data_out,core_data_in;
     reg  [31:0] clk_div;
     wire [63:0] debug_reg_data;
@@ -35,13 +36,13 @@ module Core(
     reg[31:0] pc_out_div=0;
     always @(pc_out)
     begin
-        pc_out_div <= pc_out/4;
+        pc_out_div = pc_out/4;
     end
 
-    reg[31:0] addr_out_div=0;
+    reg[63:0] addr_out_div=0;
     always @(addr_out)
     begin
-        addr_out_div <= addr_out/4;
+        addr_out_div = addr_out/4;
     end
 
     
@@ -62,8 +63,8 @@ module Core(
     );
     
     always @(posedge clk) begin
-        if(rst) clk_div <= 0;
-        else clk_div <= clk_div + 1;
+        if(rst) clk_div = 0;
+        else clk_div = clk_div + 1;
     end
     
     assign mem_clk = ~clk_div[0]; // 50mhz
@@ -81,7 +82,7 @@ module Core(
         .we(mem_write), // 写使能输入
         .write_data(core_data_out), // 数据输入
         .myraminput_inst(myram_input_inst), // mem 阶段此时的指令
-        .address(addr_out[10:0]), // 地址输入，这次不用/4
+        .address(addr_out[9:0]), // 地址输入，这次不用/4
         .read_data(core_data_in) // 数据输出
     );
 

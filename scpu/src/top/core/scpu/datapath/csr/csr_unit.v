@@ -58,8 +58,19 @@ end
 
 // 写入
 // 若源通用寄存器为x0或立即数0不会进行写入CSR操作。
-always @(negedge clk) begin
-    if(csrin_write) begin // 如果存在写入操作
+always @(negedge clk or posedge rst) begin
+    if(rst) begin
+        mtvec_reg <= 64'h0;
+        mepc_reg <= 64'h0;
+        mstatus_reg <= 64'h0;
+        mcause_reg <= 64'h0;
+        stvec_reg <= 64'h0;
+        sepc_reg <= 64'h0;
+        sstatus_reg <= 64'h0;
+        scause_reg <= 64'h0;
+        satp_reg <= 64'h0;
+    end
+    else if(csrin_write) begin // 如果存在写入操作
         case(csrin_ex_inst[31:20]) // 根据写入的地址，确定写入的寄存器
             mtvec: mtvec_reg = csrin_write_data==0 ? mtvec_reg : csrin_write_data;
             mepc: mepc_reg = csrin_write_data==0 ? mepc_reg : csrin_write_data;
@@ -93,18 +104,6 @@ always @(negedge clk) begin
             default: csrout_csr_data_reg = csrout_csr_data_reg; // 读的内容不变
         endcase
     end
-end
-
-always @(posedge rst) begin
-    mtvec_reg <= 64'h0;
-    mepc_reg <= 64'h0;
-    mstatus_reg <= 64'h0;
-    mcause_reg <= 64'h0;
-    stvec_reg <= 64'h0;
-    sepc_reg <= 64'h0;
-    sstatus_reg <= 64'h0;
-    scause_reg <= 64'h0;
-    satp_reg <= 64'h0;
 end
 
 assign csrout_csr_data = csrout_csr_data_reg;

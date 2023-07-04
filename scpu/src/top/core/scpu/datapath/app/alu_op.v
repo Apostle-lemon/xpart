@@ -74,6 +74,9 @@ module ALUOP (
             3'b111:begin // and
                 alu_op_reg = 4'b0111;
             end
+            default:begin
+                alu_op_reg = 4'b0000;
+            end
             endcase
         end
         default:begin

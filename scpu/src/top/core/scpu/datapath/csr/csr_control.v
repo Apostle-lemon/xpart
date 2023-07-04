@@ -51,8 +51,14 @@ end
 
 always @(*) begin
     case(csrcontrolin_inst[31:0]) 
-        32'h30200073: csrcontrolout_mem_is_mret_reg = 1'b1; // mret
-        32'h10200073: csrcontrolout_mem_is_sret_reg = 1'b1; // sret
+        32'h30200073: begin
+            csrcontrolout_mem_is_mret_reg = 1'b1; // mret
+            csrcontrolout_mem_is_sret_reg = 1'b0;
+        end
+        32'h10200073: begin
+            csrcontrolout_mem_is_mret_reg = 1'b0;
+            csrcontrolout_mem_is_sret_reg = 1'b1; // sret
+        end
         default: begin
             csrcontrolout_mem_is_mret_reg = 1'b0;
             csrcontrolout_mem_is_sret_reg = 1'b0;
