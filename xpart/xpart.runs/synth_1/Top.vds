@@ -2,10 +2,664 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Tue Jul  4 15:50:13 2023
-# Process ID: 3644
+# Start of session at: Tue Jul  4 19:11:15 2023
+# Process ID: 7268
 # Current directory: C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.runs/synth_1
 # Command line: vivado.exe -log Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
 # Log file: C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.runs/synth_1/Top.vds
 # Journal file: C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
+source Top.tcl -notrace
+Command: read_checkpoint -incremental C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.srcs/utils_1/imports/synth_1/Top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.srcs/utils_1/imports/synth_1/Top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top Top -part xc7a100tcsg324-3
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+WARNING: [Designutils 20-4382] Reverting to default synthesis as last run was incremental
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 26432
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1112.414 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Top' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/Top.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'Core' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/core.v:3]
+INFO: [Synth 8-6157] synthesizing module 'SCPU' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/SCPU.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Datapath' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/datapath.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ADD' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/add.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'ADD' (1#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/add.v:2]
+INFO: [Synth 8-6157] synthesizing module 'PC_BRANCH_MUX' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/pc_branch_mux.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'PC_BRANCH_MUX' (2#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/pc_branch_mux.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MUX2T1_32' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/MUX2T1_32.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'MUX2T1_32' (3#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/MUX2T1_32.v:4]
+INFO: [Synth 8-6157] synthesizing module 'PC' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/pc.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'PC' (4#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/pc.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IFINSTMUX' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/if_inst_mux.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'IFINSTMUX' (5#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/if_inst_mux.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IFIDREG' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/regs/ifidreg.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'IFIDREG' (6#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/regs/ifidreg.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ID_INST_MUX' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/id_inst_mux.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ID_INST_MUX' (7#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/id_inst_mux.v:1]
+INFO: [Synth 8-6157] synthesizing module 'CONTROL' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/control/Control.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'CONTROL' (8#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/control/Control.v:3]
+INFO: [Synth 8-6157] synthesizing module 'RAW_HAZARD_UNIT' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/raw_hazard_unit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'RAW_HAZARD_UNIT' (9#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/raw_hazard_unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ID_IDEX_SIGNAL' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/id_idex_signal.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ID_IDEX_SIGNAL' (10#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/id_idex_signal.v:1]
+INFO: [Synth 8-6157] synthesizing module 'REGS' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/registers.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'REGS' (11#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/registers.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ImmGen' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/imm_gen.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'ImmGen' (12#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/imm_gen.v:2]
+INFO: [Synth 8-6157] synthesizing module 'ALUOP' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/alu_op.v:1]
+INFO: [Synth 8-226] default block is never used [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/alu_op.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'ALUOP' (13#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/alu_op.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IDEXREG' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/regs/idexreg.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'IDEXREG' (14#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/regs/idexreg.v:1]
+INFO: [Synth 8-6157] synthesizing module 'CSR_FORWARDING_UNIT' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_forwarding_unit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'CSR_FORWARDING_UNIT' (15#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_forwarding_unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'CSR_SOURCE_MUX' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_source_mux.v:1]
+INFO: [Synth 8-226] default block is never used [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_source_mux.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'CSR_SOURCE_MUX' (16#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_source_mux.v:1]
+INFO: [Synth 8-6157] synthesizing module 'CSR_EX_UNIT' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_ex_unit.v:1]
+	Parameter mtvec bound to: 12'b001100000101 
+	Parameter mepc bound to: 12'b001101000001 
+	Parameter mstatus bound to: 12'b001100000000 
+	Parameter mcause bound to: 12'b001101000010 
+	Parameter stvec bound to: 12'b000100000101 
+	Parameter sepc bound to: 12'b000101000001 
+	Parameter sstatus bound to: 12'b000100000000 
+	Parameter scause bound to: 12'b000101000010 
+	Parameter satp bound to: 12'b000110000000 
+INFO: [Synth 8-6155] done synthesizing module 'CSR_EX_UNIT' (17#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_ex_unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'CSR_CONTROL' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_control.v:1]
+	Parameter mtvec bound to: 12'b001100000101 
+	Parameter mepc bound to: 12'b001101000001 
+	Parameter mstatus bound to: 12'b001100000000 
+	Parameter mcause bound to: 12'b001101000010 
+	Parameter stvec bound to: 12'b000100000101 
+	Parameter sepc bound to: 12'b000101000001 
+	Parameter sstatus bound to: 12'b000100000000 
+	Parameter scause bound to: 12'b000101000010 
+	Parameter satp bound to: 12'b000110000000 
+INFO: [Synth 8-6155] done synthesizing module 'CSR_CONTROL' (18#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_control.v:1]
+INFO: [Synth 8-6157] synthesizing module 'CSR_UNIT' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_unit.v:1]
+	Parameter mtvec bound to: 12'b001100000101 
+	Parameter mepc bound to: 12'b001101000001 
+	Parameter mstatus bound to: 12'b001100000000 
+	Parameter mcause bound to: 12'b001101000010 
+	Parameter stvec bound to: 12'b000100000101 
+	Parameter sepc bound to: 12'b000101000001 
+	Parameter sstatus bound to: 12'b000100000000 
+	Parameter scause bound to: 12'b000101000010 
+	Parameter satp bound to: 12'b000110000000 
+INFO: [Synth 8-6155] done synthesizing module 'CSR_UNIT' (19#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'EXADD' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/ex_add.v:1]
+INFO: [Synth 8-6157] synthesizing module 'SHEFT_LEFT1' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/sheft_left1.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'SHEFT_LEFT1' (20#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/sheft_left1.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'EXADD' (21#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/ex_add.v:1]
+INFO: [Synth 8-6157] synthesizing module 'BRANCH_JUMP_DETECT' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/branch_jump_detect.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'BRANCH_JUMP_DETECT' (22#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/branch_jump_detect.v:1]
+INFO: [Synth 8-6157] synthesizing module 'FORWARDING_UNIT' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/forwarding_unit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'FORWARDING_UNIT' (23#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/forwarding_unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MUX4T1_64' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/MUX4T1_64.v:3]
+INFO: [Synth 8-226] default block is never used [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/MUX4T1_64.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'MUX4T1_64' (24#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/MUX4T1_64.v:3]
+INFO: [Synth 8-6157] synthesizing module 'MUX2T1_64' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/MUX2T1_64.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'MUX2T1_64' (25#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/MUX2T1_64.v:4]
+INFO: [Synth 8-6157] synthesizing module 'ALUCONTROL' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/alu_control.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'ALUCONTROL' (26#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/alu_control.v:4]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/alu.v:2]
+	Parameter ADD bound to: 4'b0000 
+	Parameter SUB bound to: 4'b1000 
+	Parameter SLL bound to: 4'b0001 
+	Parameter SLT bound to: 4'b0010 
+	Parameter SLTU bound to: 4'b0011 
+	Parameter XOR bound to: 4'b0100 
+	Parameter SRL bound to: 4'b0101 
+	Parameter SRA bound to: 4'b1101 
+	Parameter OR bound to: 4'b0110 
+	Parameter AND bound to: 4'b0111 
+	Parameter ADDW bound to: 4'b1001 
+	Parameter ADDIW bound to: 4'b1000 
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (27#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/alu.v:2]
+INFO: [Synth 8-6157] synthesizing module 'EXMEMREG' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/regs/exmemreg.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'EXMEMREG' (28#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/regs/exmemreg.v:1]
+INFO: [Synth 8-6157] synthesizing module 'PCSRC1GEN' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/pc_src1_gen.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'PCSRC1GEN' (29#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/pc_src1_gen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'PCSRC0GEN' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/pc_src0_gen.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'PCSRC0GEN' (30#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/pc_src0_gen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MEMWBREG' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/regs/memwbreg.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MEMWBREG' (31#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/regs/memwbreg.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Datapath' (32#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/datapath.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'SCPU' (33#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/SCPU.v:3]
+INFO: [Synth 8-6157] synthesizing module 'myRom' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/rom/myRom.v:3]
+	Parameter FILE_PATH bound to: C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/rom/kernel_normal2.sim - type: string 
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/rom/kernel_normal2.sim' is read successfully [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/rom/myRom.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'myRom' (34#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/rom/myRom.v:3]
+WARNING: [Synth 8-689] width (32) of port connection 'address' does not match port width (11) of module 'myRom' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/core.v:75]
+INFO: [Synth 8-6157] synthesizing module 'myRam' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/ram/myRam.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'myRam' (35#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/ram/myRam.v:3]
+INFO: [Synth 8-6157] synthesizing module 'vga_dma' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_dma.v:3]
+INFO: [Synth 8-6157] synthesizing module 'vga_top' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'vga_sync' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_sync.v:3]
+	Parameter HD bound to: 640 - type: integer 
+	Parameter HB bound to: 16 - type: integer 
+	Parameter HR bound to: 96 - type: integer 
+	Parameter HF bound to: 48 - type: integer 
+	Parameter VD bound to: 480 - type: integer 
+	Parameter VB bound to: 33 - type: integer 
+	Parameter VR bound to: 2 - type: integer 
+	Parameter VF bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'counter_mod_m' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/counter_mod_m.v:3]
+	Parameter N bound to: 2 - type: integer 
+	Parameter M bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'counter_mod_m' (36#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/counter_mod_m.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'vga_sync' (37#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_sync.v:3]
+INFO: [Synth 8-6157] synthesizing module 'vga_gen_grafic' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_gen_grafic.v:3]
+	Parameter START_DISPLAY_COLUMN bound to: 5 - type: integer 
+	Parameter INTERNAL_SPACE bound to: 3 - type: integer 
+	Parameter LEFT_BOUND bound to: 4 - type: integer 
+	Parameter RIGHT_BOUND bound to: 783 - type: integer 
+	Parameter left_pos bound to: 144 - type: integer 
+	Parameter right_pos bound to: 783 - type: integer 
+	Parameter up_pos_row1 bound to: 41 - type: integer 
+	Parameter down_pos_row1 bound to: 110 - type: integer 
+	Parameter up_pos_row2 bound to: 171 - type: integer 
+	Parameter down_pos_row2 bound to: 240 - type: integer 
+	Parameter up_pos_row3 bound to: 311 - type: integer 
+	Parameter down_pos_row3 bound to: 380 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'vga_gen_col' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_gen_col.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'vga_gen_col' (38#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_gen_col.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'vga_gen_grafic' (39#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_gen_grafic.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'vga_top' (40#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_top.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'vga_dma' (41#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_dma.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Core' (42#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/core.v:3]
+INFO: [Synth 8-6157] synthesizing module 'IO_Manager' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/io_manager/IO_Manager.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'counter' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/io_manager/IO_Manager.sv:245]
+INFO: [Synth 8-6155] done synthesizing module 'counter' (43#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/io_manager/IO_Manager.sv:245]
+INFO: [Synth 8-6157] synthesizing module 'button_debouncer' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/io_manager/IO_Manager.sv:160]
+INFO: [Synth 8-6155] done synthesizing module 'button_debouncer' (44#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/io_manager/IO_Manager.sv:160]
+INFO: [Synth 8-6157] synthesizing module 'hex_to_shape' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/io_manager/IO_Manager.sv:185]
+INFO: [Synth 8-6155] done synthesizing module 'hex_to_shape' (45#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/io_manager/IO_Manager.sv:185]
+INFO: [Synth 8-6157] synthesizing module 'segnum_manager' [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/io_manager/IO_Manager.sv:213]
+INFO: [Synth 8-6155] done synthesizing module 'segnum_manager' (46#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/io_manager/IO_Manager.sv:213]
+INFO: [Synth 8-6155] done synthesizing module 'IO_Manager' (47#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/io_manager/IO_Manager.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'Top' (48#1) [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/Top.sv:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:27 ; elapsed = 00:01:05 . Memory (MB): peak = 3384.145 ; gain = 2271.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:01:11 . Memory (MB): peak = 3384.145 ; gain = 2271.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:29 ; elapsed = 00:01:11 . Memory (MB): peak = 3384.145 ; gain = 2271.730
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 3384.145 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/constrs/nexys_a7.xdc]
+Finished Parsing XDC File [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/constrs/nexys_a7.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/constrs/nexys_a7.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 3384.145 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.341 . Memory (MB): peak = 3384.145 ; gain = 0.000
+WARNING: [Designutils 20-4382] Reverting to default synthesis as last run was incremental
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:57 ; elapsed = 00:02:08 . Memory (MB): peak = 3384.145 ; gain = 2271.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:57 ; elapsed = 00:02:08 . Memory (MB): peak = 3384.145 ; gain = 2271.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:57 ; elapsed = 00:02:08 . Memory (MB): peak = 3384.145 ; gain = 2271.730
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'segnum_manager'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE7 |                             0000 |                         00000000
+*
+                  iSTATE |                             0001 |                         11111110
+                 iSTATE0 |                             0010 |                         11111101
+                 iSTATE1 |                             0011 |                         11111011
+                 iSTATE2 |                             0100 |                         11110111
+                 iSTATE3 |                             0101 |                         11101111
+                 iSTATE4 |                             0110 |                         11011111
+                 iSTATE5 |                             0111 |                         10111111
+                 iSTATE6 |                             1000 |                         01111111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'segnum_manager'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:05:29 ; elapsed = 00:12:16 . Memory (MB): peak = 3384.145 ; gain = 2271.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 2     
+	   3 Input   64 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 6     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 3     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input     64 Bit         XORs := 1     
++---Registers : 
+	               70 Bit    Registers := 180   
+	               64 Bit    Registers := 51    
+	               32 Bit    Registers := 14    
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 549   
+	                5 Bit    Registers := 6     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	  37 Input   70 Bit        Muxes := 1800  
+	   2 Input   70 Bit        Muxes := 1800  
+	   6 Input   64 Bit        Muxes := 1     
+	   2 Input   64 Bit        Muxes := 14    
+	   4 Input   64 Bit        Muxes := 9     
+	  12 Input   64 Bit        Muxes := 2     
+	  10 Input   64 Bit        Muxes := 1     
+	   3 Input   64 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 16    
+	   3 Input   32 Bit        Muxes := 1     
+	 295 Input   32 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 2883  
+	   5 Input    8 Bit        Muxes := 157   
+	   4 Input    8 Bit        Muxes := 640   
+	   3 Input    8 Bit        Muxes := 206   
+	   9 Input    8 Bit        Muxes := 2     
+	   2 Input    6 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 4     
+	  13 Input    4 Bit        Muxes := 1     
+	  10 Input    4 Bit        Muxes := 2     
+	   8 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   9 Input    4 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 157   
+	   2 Input    3 Bit        Muxes := 13    
+	  10 Input    3 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 14    
+	  13 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 2926  
+	   4 Input    1 Bit        Muxes := 642   
+	   5 Input    1 Bit        Muxes := 379   
+	   3 Input    1 Bit        Muxes := 263   
+	  13 Input    1 Bit        Muxes := 5     
+	  12 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'vga_r_reg[0]' (FDC) to 'vga_r_reg[1]'
+INFO: [Synth 8-3886] merging instance 'vga_r_reg[1]' (FDC) to 'vga_r_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vga_r_reg[3] )
+INFO: [Synth 8-5587] ROM size for "control/alu_src_b_reg" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "control/mem_write_reg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "control/branch_reg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "control/mem_to_reg_reg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "control/reg_write_reg" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-7129] Port address[10] in module myRom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[9] in module myRom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcsrc1in_inst[31] in module PCSRC1GEN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcsrc1in_inst[30] in module PCSRC1GEN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcsrc1in_inst[29] in module PCSRC1GEN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcsrc1in_inst[28] in module PCSRC1GEN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcsrc1in_inst[27] in module PCSRC1GEN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcsrc1in_inst[26] in module PCSRC1GEN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcsrc1in_inst[25] in module PCSRC1GEN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcsrc1in_inst[24] in module PCSRC1GEN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcsrc1in_inst[23] in module PCSRC1GEN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcsrc1in_inst[22] in module PCSRC1GEN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcsrc1in_inst[21] in module PCSRC1GEN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcsrc1in_inst[20] in module PCSRC1GEN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcsrc1in_inst[19] in module PCSRC1GEN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcsrc1in_inst[18] in module PCSRC1GEN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcsrc1in_inst[17] in module PCSRC1GEN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcsrc1in_inst[16] in module PCSRC1GEN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcsrc1in_inst[15] in module PCSRC1GEN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcsrc1in_inst[11] in module PCSRC1GEN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcsrc1in_inst[10] in module PCSRC1GEN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcsrc1in_inst[9] in module PCSRC1GEN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcsrc1in_inst[8] in module PCSRC1GEN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcsrc1in_inst[7] in module PCSRC1GEN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[63] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[62] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[61] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[60] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[59] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[58] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[57] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[56] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[55] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[54] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[53] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[52] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[51] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[50] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[49] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[48] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[47] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[46] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[45] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[44] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[43] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[42] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[41] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[40] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[39] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[38] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[37] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[36] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[35] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[34] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[33] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exmemin_ex_add_result[32] in module EXMEMREG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[11] in module ALU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[10] in module ALU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[9] in module ALU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[8] in module ALU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[7] in module ALU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port forwardin_mem_WB[1] in module FORWARDING_UNIT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port forwardin_mem_WB[0] in module FORWARDING_UNIT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port forwardin_wb_WB[1] in module FORWARDING_UNIT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port forwardin_wb_WB[0] in module FORWARDING_UNIT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_inst[31] in module EXADD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_inst[30] in module EXADD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_inst[29] in module EXADD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_inst[28] in module EXADD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_inst[27] in module EXADD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_inst[26] in module EXADD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_inst[25] in module EXADD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_inst[24] in module EXADD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_inst[23] in module EXADD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_inst[22] in module EXADD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_inst[21] in module EXADD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_inst[20] in module EXADD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_inst[19] in module EXADD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_inst[18] in module EXADD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_inst[17] in module EXADD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_inst[16] in module EXADD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_inst[15] in module EXADD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_inst[14] in module EXADD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_inst[13] in module EXADD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_inst[12] in module EXADD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_inst[11] in module EXADD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_inst[10] in module EXADD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_inst[9] in module EXADD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_inst[8] in module EXADD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_inst[7] in module EXADD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csrin_id_inst[19] in module CSR_UNIT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csrin_id_inst[18] in module CSR_UNIT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csrin_id_inst[17] in module CSR_UNIT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csrin_id_inst[16] in module CSR_UNIT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csrin_id_inst[15] in module CSR_UNIT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csrin_id_inst[14] in module CSR_UNIT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csrin_id_inst[13] in module CSR_UNIT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csrin_id_inst[12] in module CSR_UNIT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csrin_id_inst[11] in module CSR_UNIT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csrin_id_inst[10] in module CSR_UNIT is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/ifidreg/ifidout_id_pc_addr0_reg_reg[1]' (FDCE) to 'cpu/datapath/ifidreg/ifidout_pc_out_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/ifidreg/ifidout_inst_reg_reg[0]' (FDPE) to 'cpu/datapath/ifidreg/ifidout_inst_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[31]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[32]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[32]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[33]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[33]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[34]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[34]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[35]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[35]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[36]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[36]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[37]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[37]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[38]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[38]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[39]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[39]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[40]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[40]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[41]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[41]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[42]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[42]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[43]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[43]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[44]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[44]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[45]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[45]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[46]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[46]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[47]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[47]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[48]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[48]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[49]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[49]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[50]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[50]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[51]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[51]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[52]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[52]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[53]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[53]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[54]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[54]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[55]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[55]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[56]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[56]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[57]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[57]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[58]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[58]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[59]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[59]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[60]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[60]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[61]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[61]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[62]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[62]' (FDC) to 'cpu/datapath/idereg/idexout_ex_imm_reg_reg[63]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[31]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[32]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[32]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[33]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[33]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[34]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[34]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[35]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[35]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[36]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[36]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[37]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[37]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[38]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[38]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[39]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[39]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[40]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[40]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[41]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[41]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[42]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[42]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[43]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[43]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[44]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[44]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[45]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[45]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[46]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[46]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[47]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[47]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[48]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[48]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[49]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[49]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[50]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[50]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[51]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[51]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[52]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[52]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[53]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[53]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[54]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[54]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[55]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[55]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[56]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[56]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[57]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[57]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[58]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[58]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[59]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[59]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[60]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[60]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[61]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[61]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[62]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[62]' (FDC) to 'cpu/datapath/exmemreg/exmemout_mem_imm_reg_reg[63]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/idereg/idexout_ex_inst_reg_reg[0]' (FDP) to 'cpu/datapath/idereg/idexout_ex_inst_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[31]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[32]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[32]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[33]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[33]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[34]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[34]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[35]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[35]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[36]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[36]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[37]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[37]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[38]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[38]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[39]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[39]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[40]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[40]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[41]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[41]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[42]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[42]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[43]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[43]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[44]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[44]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[45]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[45]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[46]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[46]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[47]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[47]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[48]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[48]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[49]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[49]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[50]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[50]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[51]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[51]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[52]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[52]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[53]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[53]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[54]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[54]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[55]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[55]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[56]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[56]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[57]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[57]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[58]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[58]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[59]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[59]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[60]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[60]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[61]'
+INFO: [Synth 8-3886] merging instance 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[61]' (FDC) to 'cpu/datapath/memwbreg/memwbout_wb_imm_reg_reg[62]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:07:07 ; elapsed = 00:15:44 . Memory (MB): peak = 3384.145 ; gain = 2271.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:07:12 ; elapsed = 00:15:57 . Memory (MB): peak = 3384.145 ; gain = 2271.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:07:20 ; elapsed = 00:16:15 . Memory (MB): peak = 3384.145 ; gain = 2271.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:07:42 ; elapsed = 00:17:02 . Memory (MB): peak = 3384.145 ; gain = 2271.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:07:52 ; elapsed = 00:17:25 . Memory (MB): peak = 3384.145 ; gain = 2271.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:07:52 ; elapsed = 00:17:26 . Memory (MB): peak = 3384.145 ; gain = 2271.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:07:56 ; elapsed = 00:17:34 . Memory (MB): peak = 3384.145 ; gain = 2271.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:07:56 ; elapsed = 00:17:34 . Memory (MB): peak = 3384.145 ; gain = 2271.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:08:00 ; elapsed = 00:17:46 . Memory (MB): peak = 3384.145 ; gain = 2271.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:08:00 ; elapsed = 00:17:46 . Memory (MB): peak = 3384.145 ; gain = 2271.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |   383|
+|3     |LUT1   |    80|
+|4     |LUT2   |  1382|
+|5     |LUT3   |  2952|
+|6     |LUT4   |  3276|
+|7     |LUT5   |  5605|
+|8     |LUT6   | 30091|
+|9     |MUXF7  |  3674|
+|10    |MUXF8  |  1491|
+|11    |FDCE   |  5240|
+|12    |FDPE   |    19|
+|13    |FDRE   |  4394|
+|14    |FDSE   |     2|
+|15    |IBUF   |    23|
+|16    |OBUF   |    52|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:08:00 ; elapsed = 00:17:46 . Memory (MB): peak = 3384.145 ; gain = 2271.730
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 100 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:07:06 ; elapsed = 00:17:00 . Memory (MB): peak = 3384.145 ; gain = 2271.730
+Synthesis Optimization Complete : Time (s): cpu = 00:08:00 ; elapsed = 00:17:49 . Memory (MB): peak = 3384.145 ; gain = 2271.730
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 3384.145 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 5548 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 3384.145 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+229 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:08:10 ; elapsed = 00:18:12 . Memory (MB): peak = 3384.145 ; gain = 2271.730
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/xpart/xpart.runs/synth_1/Top.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 3384.145 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jul  4 19:29:56 2023...

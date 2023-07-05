@@ -3,17 +3,27 @@ module Datapath(
     input rst,
 
     input [31:0] inst_in,
-    input [63:0] data_in,            // data from data memory
+    input [63:0] data_in,            // data from data mmu
 
     // output
-    output [63:0] addr_out,          // data memory address    
-    output [63:0] data_out,          // data to data memory
+    output [63:0] addr_out,          // physical_addr or virtual_addr 
+    output [63:0] data_out,          // data to mmu
     output [31:0] pc_out,             // program counter
     output [31:0] datapathoutput_mem_inst, 
     output mem_write,
 
     input [4:0] debug_reg_addr,
-    output [63:0] debug_reg_data
+    output [63:0] debug_reg_data,
+
+    // FOR MMU
+    output datapathout_flush, 
+    output [63:0] datapathout_satp_data,
+    output datapathout_write_mem_valid,
+    output datapathout_vir_valid,
+    output datapathout_mem_valid,
+
+    input datapathin_mmu_data_ready
+
 );
 
 // .__  _____ 
@@ -21,6 +31,9 @@ module Datapath(
 // |  \   __\ 
 // |  ||  |   
 // |__||__|   
+
+assign datapathout_satp_data = datapath_satp_data;
+assign datapathout_write_mem_valid = mem_write;
 
 wire [31:0] pc_addr0;
 wire [31:0] pc_addr1;
@@ -62,9 +75,9 @@ wire pc_write;
 wire ex_is_branch_jump;
 wire [31:0] if_inst_modified;
 
-//TODO: 需要注意的是，当我们取到 ecall 指令时，pc 下一个时钟周期即会变成 stvec
+//TODO: �?要注意的是，当我们取�? ecall 指令时，pc 下一个时钟周期即会变�? stvec
 // 但是 mtvec 可能在前两条指令时发生写入，但我们这里不考虑这个情况
-// 如果发生了这种情况，记得修改对应的内容
+// 如果发生了这种情况，记得修改对应的内�?
 wire [63:0] datapath_mtvec_data;
 wire [63:0] datapath_mepc_data;
 wire [63:0] datapath_mstatus_data;
@@ -73,8 +86,10 @@ wire [63:0] datapath_sepc_data;
 wire [63:0] datapath_sstatus_data;
 wire [63:0] datapath_scause_data;
 wire [63:0] datapath_satp_data;
-wire mem_is_mret; // 如果 mem_is_mret，那么 pc 就可以更新为 mepc 了
+wire mem_is_mret; // 如果 mem_is_mret，那�? pc 就可以更新为 mepc �?
 wire mem_is_sret;
+
+
 PC pc(
     .clk(clk),
     .rst(rst),
@@ -87,6 +102,11 @@ PC pc(
     .pc_write(pc_write),
     .set_pc_to_mepc(mem_is_mret),
     .set_pc_to_sepc(mem_is_sret),
+
+    // mmu stall
+    .mem_valid(datapathout_mem_valid),
+    .mmu_data_ready(datapathin_mmu_data_ready),
+
     .new_addr(pc_out)
 );
 
@@ -323,7 +343,7 @@ CSR_CONTROL csr_control(
     .csrcontrolout_mem_is_sret(mem_is_sret)
 );
 
-// 注意：只有使用 id_inst 才能满足 poseedg clock 的要求
+// 注意：只有使�? id_inst 才能满足 poseedg clock 的要�?
 wire [63:0] datapath_mcause_data;
 
 
@@ -434,7 +454,7 @@ ALU ex_alu(
 
 wire [2:0] mem_M;
 wire [63:0] mem_rs1_data;
-wire [63:0] mem_rs2_data; // 需要 rs1_data 和 rs2_data 进行无符号比较，生成 pr_src[1]
+wire [63:0] mem_rs2_data; // �?�? rs1_data �? rs2_data 进行无符号比较，生成 pr_src[1]
 wire [63:0] mem_imm;
 wire [31:0] mem_inst;
 wire [31:0] mem_pc_out;
@@ -479,6 +499,24 @@ EXMEMREG exmemreg(
 
 // b_type and beq or not (b_type and bne) 
 
+wire datapathout_flush_wire;
+assign datapathout_flush = datapathout_flush_wire;
+
+gen_flush mem_gen_flush(
+    .mem_inst(mem_inst),
+    .flush(datapathout_flush_wire)
+);
+
+virtual_valid mem_virtual_valid(
+    .satp_value(datapath_satp_data),
+    .virtual_valid(datapathout_vir_valid)
+);
+
+mem_valid mem_mem_valid(
+    .mem_inst(mem_inst),
+    .mem_valid(datapathout_mem_valid)
+);
+
 BRANCH_JUMP_DETECT mem_branch_jump_detect(
     .branchjumpdetectin_inst(mem_inst),
     .branchjumpdetectout_is_branch_jump(mem_is_branch_jump)
@@ -521,6 +559,10 @@ wire [31:0] wb_pc_out;
 MEMWBREG memwbreg(
     .clk(clk),
     .rst(rst),
+
+    .mem_valid(datapathout_mem_valid),
+    .mmu_data_ready(datapathin_mmu_data_ready),
+
     .memwbin_wb(mem_WB),
     .memwbin_mem_data_in(data_in),
     .memwbin_mem_alu_result(mem_alu_result),

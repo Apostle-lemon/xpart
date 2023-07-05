@@ -97,7 +97,11 @@ module vga_dma (
                 dma_ram[35] = 8'b00000000; // "*"
             end
         end else if ( cpu_addr_out >= 32'h0b000000 && cpu_addr_out <= 32'h0b0000ff ) begin
-            dma_ram[cpu_addr_out[5:0]] <= vga_dma_data_in[7:0];
+            if(vga_dma_data_in[7:0]>=0 && vga_dma_data_in[7:0]<=9) begin
+                dma_ram[cpu_addr_out[5:0]] <= vga_dma_data_in[7:0] + 8'b00110000;
+            end else begin
+                dma_ram[cpu_addr_out[5:0]] <= vga_dma_data_in[7:0];
+            end
         end
     end
 

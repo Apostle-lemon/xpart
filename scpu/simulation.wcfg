@@ -11,21 +11,17 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="660191fs"></ZoomStartTime>
-      <ZoomEndTime time="1067962fs"></ZoomEndTime>
-      <Cursor1Time time="1000000fs"></Cursor1Time>
+      <ZoomStartTime time="12091543fs"></ZoomStartTime>
+      <ZoomEndTime time="12279741fs"></ZoomEndTime>
+      <Cursor1Time time="12162188fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="290"></NameColumnWidth>
-      <ValueColumnWidth column_width="103"></ValueColumnWidth>
+      <ValueColumnWidth column_width="92"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="29" />
+   <WVObjectSize size="26" />
    <wave_markers>
-      <marker time="9380000" label="" />
-      <marker time="9420000" label="" />
-      <marker time="9460000" label="" />
-      <marker time="2303380000" label="" />
-      <marker time="5300000" label="" />
+      <marker time="12140000" label="" />
    </wave_markers>
    <wvobject fp_name="/Core_tb/uut/cpu/datapath/rst" type="logic">
       <obj_property name="ElementShortName">rst</obj_property>
@@ -115,71 +111,7 @@
       <obj_property name="ElementShortName">registers[1:31][63:0]</obj_property>
       <obj_property name="ObjectShortName">registers[1:31][63:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="group103" type="group">
-      <obj_property name="label">ex_mux_rs1</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/ex_mux_rs1/data_in_0" type="array">
-         <obj_property name="ElementShortName">data_in_0[63:0]</obj_property>
-         <obj_property name="ObjectShortName">data_in_0[63:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/ex_mux_rs1/data_in_1" type="array">
-         <obj_property name="ElementShortName">data_in_1[63:0]</obj_property>
-         <obj_property name="ObjectShortName">data_in_1[63:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/ex_mux_rs1/data_in_2" type="array">
-         <obj_property name="ElementShortName">data_in_2[63:0]</obj_property>
-         <obj_property name="ObjectShortName">data_in_2[63:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/ex_mux_rs1/data_in_3" type="array">
-         <obj_property name="ElementShortName">data_in_3[63:0]</obj_property>
-         <obj_property name="ObjectShortName">data_in_3[63:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/ex_mux_rs1/sel" type="array">
-         <obj_property name="ElementShortName">sel[1:0]</obj_property>
-         <obj_property name="ObjectShortName">sel[1:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/ex_mux_rs1/data_out" type="array">
-         <obj_property name="ElementShortName">data_out[63:0]</obj_property>
-         <obj_property name="ObjectShortName">data_out[63:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/ex_mux_rs1/output_data" type="array">
-         <obj_property name="ElementShortName">output_data[63:0]</obj_property>
-         <obj_property name="ObjectShortName">output_data[63:0]</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="group111" type="group">
-      <obj_property name="label">mem_mux</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/mem_mux/data_in_0" type="array">
-         <obj_property name="ElementShortName">data_in_0[63:0]</obj_property>
-         <obj_property name="ObjectShortName">data_in_0[63:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/mem_mux/data_in_1" type="array">
-         <obj_property name="ElementShortName">data_in_1[63:0]</obj_property>
-         <obj_property name="ObjectShortName">data_in_1[63:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/mem_mux/data_in_2" type="array">
-         <obj_property name="ElementShortName">data_in_2[63:0]</obj_property>
-         <obj_property name="ObjectShortName">data_in_2[63:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/mem_mux/data_in_3" type="array">
-         <obj_property name="ElementShortName">data_in_3[63:0]</obj_property>
-         <obj_property name="ObjectShortName">data_in_3[63:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/mem_mux/sel" type="array">
-         <obj_property name="ElementShortName">sel[1:0]</obj_property>
-         <obj_property name="ObjectShortName">sel[1:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/mem_mux/data_out" type="array">
-         <obj_property name="ElementShortName">data_out[63:0]</obj_property>
-         <obj_property name="ObjectShortName">data_out[63:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/mem_mux/output_data" type="array">
-         <obj_property name="ElementShortName">output_data[63:0]</obj_property>
-         <obj_property name="ObjectShortName">output_data[63:0]</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="group122" type="group">
+   <wvobject fp_name="group22" type="group">
       <obj_property name="label">ram</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <wvobject fp_name="/Core_tb/uut/ram_unit/clk" type="logic">
@@ -199,16 +131,17 @@
          <obj_property name="ObjectShortName">myraminput_inst[31:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/Core_tb/uut/ram_unit/address" type="array">
-         <obj_property name="ElementShortName">address[10:0]</obj_property>
-         <obj_property name="ObjectShortName">address[10:0]</obj_property>
+         <obj_property name="ElementShortName">address[11:0]</obj_property>
+         <obj_property name="ObjectShortName">address[11:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/Core_tb/uut/ram_unit/read_data" type="array">
          <obj_property name="ElementShortName">read_data[63:0]</obj_property>
          <obj_property name="ObjectShortName">read_data[63:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/Core_tb/uut/ram_unit/ram" type="array">
-         <obj_property name="ElementShortName">ram[0:8191][7:0]</obj_property>
-         <obj_property name="ObjectShortName">ram[0:8191][7:0]</obj_property>
+         <obj_property name="ElementShortName">ram[0:4095][7:0]</obj_property>
+         <obj_property name="ObjectShortName">ram[0:4095][7:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
       </wvobject>
       <wvobject fp_name="/Core_tb/uut/ram_unit/opcode" type="array">
          <obj_property name="ElementShortName">opcode[6:0]</obj_property>
@@ -222,60 +155,192 @@
          <obj_property name="ElementShortName">read_data_reg[63:0]</obj_property>
          <obj_property name="ObjectShortName">read_data_reg[63:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/pc/clk" type="logic">
+   </wvobject>
+   <wvobject fp_name="group60" type="group">
+      <obj_property name="label">mmu</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/Core_tb/uut/u_mmu/clk" type="logic">
          <obj_property name="ElementShortName">clk</obj_property>
          <obj_property name="ObjectShortName">clk</obj_property>
       </wvobject>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/pc/rst" type="logic">
+      <wvobject fp_name="/Core_tb/uut/u_mmu/rst" type="logic">
          <obj_property name="ElementShortName">rst</obj_property>
          <obj_property name="ObjectShortName">rst</obj_property>
       </wvobject>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/pc/addr" type="array">
-         <obj_property name="ElementShortName">addr[31:0]</obj_property>
-         <obj_property name="ObjectShortName">addr[31:0]</obj_property>
+      <wvobject fp_name="/Core_tb/uut/u_mmu/flush" type="logic">
+         <obj_property name="ElementShortName">flush</obj_property>
+         <obj_property name="ObjectShortName">flush</obj_property>
       </wvobject>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/pc/cur_inst" type="array">
-         <obj_property name="ElementShortName">cur_inst[31:0]</obj_property>
-         <obj_property name="ObjectShortName">cur_inst[31:0]</obj_property>
+      <wvobject fp_name="/Core_tb/uut/u_mmu/mem_addr" type="array">
+         <obj_property name="ElementShortName">mem_addr[63:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_addr[63:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/pc/mtvec_data" type="array">
-         <obj_property name="ElementShortName">mtvec_data[63:0]</obj_property>
-         <obj_property name="ObjectShortName">mtvec_data[63:0]</obj_property>
+      <wvobject fp_name="/Core_tb/uut/u_mmu/satp_val" type="array">
+         <obj_property name="ElementShortName">satp_val[63:0]</obj_property>
+         <obj_property name="ObjectShortName">satp_val[63:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/pc/mepc_data" type="array">
-         <obj_property name="ElementShortName">mepc_data[63:0]</obj_property>
-         <obj_property name="ObjectShortName">mepc_data[63:0]</obj_property>
+      <wvobject fp_name="/Core_tb/uut/u_mmu/data_to_write" type="array">
+         <obj_property name="ElementShortName">data_to_write[63:0]</obj_property>
+         <obj_property name="ObjectShortName">data_to_write[63:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/pc/stvec_data" type="array">
-         <obj_property name="ElementShortName">stvec_data[63:0]</obj_property>
-         <obj_property name="ObjectShortName">stvec_data[63:0]</obj_property>
+      <wvobject fp_name="/Core_tb/uut/u_mmu/write_mem_valid" type="logic">
+         <obj_property name="ElementShortName">write_mem_valid</obj_property>
+         <obj_property name="ObjectShortName">write_mem_valid</obj_property>
       </wvobject>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/pc/sepc_data" type="array">
-         <obj_property name="ElementShortName">sepc_data[63:0]</obj_property>
-         <obj_property name="ObjectShortName">sepc_data[63:0]</obj_property>
+      <wvobject fp_name="/Core_tb/uut/u_mmu/mem_valid" type="logic">
+         <obj_property name="ElementShortName">mem_valid</obj_property>
+         <obj_property name="ObjectShortName">mem_valid</obj_property>
       </wvobject>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/pc/pc_write" type="logic">
-         <obj_property name="ElementShortName">pc_write</obj_property>
-         <obj_property name="ObjectShortName">pc_write</obj_property>
+      <wvobject fp_name="/Core_tb/uut/u_mmu/vir_valid" type="logic">
+         <obj_property name="ElementShortName">vir_valid</obj_property>
+         <obj_property name="ObjectShortName">vir_valid</obj_property>
       </wvobject>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/pc/set_pc_to_mepc" type="logic">
-         <obj_property name="ElementShortName">set_pc_to_mepc</obj_property>
-         <obj_property name="ObjectShortName">set_pc_to_mepc</obj_property>
+      <wvobject fp_name="/Core_tb/uut/u_mmu/datapath_mem_inst" type="array">
+         <obj_property name="ElementShortName">datapath_mem_inst[31:0]</obj_property>
+         <obj_property name="ObjectShortName">datapath_mem_inst[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/pc/set_pc_to_sepc" type="logic">
-         <obj_property name="ElementShortName">set_pc_to_sepc</obj_property>
-         <obj_property name="ObjectShortName">set_pc_to_sepc</obj_property>
+      <wvobject fp_name="/Core_tb/uut/u_mmu/data_from_mem" type="array">
+         <obj_property name="ElementShortName">data_from_mem[63:0]</obj_property>
+         <obj_property name="ObjectShortName">data_from_mem[63:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/pc/new_addr" type="array">
-         <obj_property name="ElementShortName">new_addr[31:0]</obj_property>
-         <obj_property name="ObjectShortName">new_addr[31:0]</obj_property>
+      <wvobject fp_name="/Core_tb/uut/u_mmu/mem_read_addr" type="array">
+         <obj_property name="ElementShortName">mem_read_addr[63:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_read_addr[63:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Core_tb/uut/cpu/datapath/pc/addr_reg" type="array">
-         <obj_property name="ElementShortName">addr_reg[31:0]</obj_property>
-         <obj_property name="ObjectShortName">addr_reg[31:0]</obj_property>
+      <wvobject fp_name="/Core_tb/uut/u_mmu/mem_data" type="array">
+         <obj_property name="ElementShortName">mem_data[63:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_data[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/u_mmu/mem_write_signal" type="logic">
+         <obj_property name="ElementShortName">mem_write_signal</obj_property>
+         <obj_property name="ObjectShortName">mem_write_signal</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/u_mmu/mem_content" type="array">
+         <obj_property name="ElementShortName">mem_content[63:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_content[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/u_mmu/finish" type="logic">
+         <obj_property name="ElementShortName">finish</obj_property>
+         <obj_property name="ObjectShortName">finish</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/u_mmu/mem_inst" type="array">
+         <obj_property name="ElementShortName">mem_inst[31:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_inst[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/u_mmu/wait_reg" type="logic">
+         <obj_property name="ElementShortName">wait_reg</obj_property>
+         <obj_property name="ObjectShortName">wait_reg</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/u_mmu/straight_read" type="array">
+         <obj_property name="ElementShortName">straight_read[1:0]</obj_property>
+         <obj_property name="ObjectShortName">straight_read[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/u_mmu/status" type="array">
+         <obj_property name="ElementShortName">status[2:0]</obj_property>
+         <obj_property name="ObjectShortName">status[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/u_mmu/tlb_find" type="logic">
+         <obj_property name="ElementShortName">tlb_find</obj_property>
+         <obj_property name="ObjectShortName">tlb_find</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/u_mmu/tlb_real_addr" type="array">
+         <obj_property name="ElementShortName">tlb_real_addr[63:0]</obj_property>
+         <obj_property name="ObjectShortName">tlb_real_addr[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/u_mmu/tlb_vir_addr" type="array">
+         <obj_property name="ElementShortName">tlb_vir_addr[63:0]</obj_property>
+         <obj_property name="ObjectShortName">tlb_vir_addr[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/u_mmu/tlb_phy_addr" type="array">
+         <obj_property name="ElementShortName">tlb_phy_addr[63:0]</obj_property>
+         <obj_property name="ObjectShortName">tlb_phy_addr[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/u_mmu/tlb_changed_vir_addr" type="array">
+         <obj_property name="ElementShortName">tlb_changed_vir_addr[63:0]</obj_property>
+         <obj_property name="ObjectShortName">tlb_changed_vir_addr[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/u_mmu/tlb_vir_valid" type="logic">
+         <obj_property name="ElementShortName">tlb_vir_valid</obj_property>
+         <obj_property name="ObjectShortName">tlb_vir_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/u_mmu/tlb_phy_valid" type="logic">
+         <obj_property name="ElementShortName">tlb_phy_valid</obj_property>
+         <obj_property name="ObjectShortName">tlb_phy_valid</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject fp_name="group94" type="group">
+   <wvobject fp_name="group78" type="group">
+      <obj_property name="label">cpu</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/Core_tb/uut/cpu/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/cpu/rst" type="logic">
+         <obj_property name="ElementShortName">rst</obj_property>
+         <obj_property name="ObjectShortName">rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/cpu/inst" type="array">
+         <obj_property name="ElementShortName">inst[31:0]</obj_property>
+         <obj_property name="ObjectShortName">inst[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/cpu/data_in" type="array">
+         <obj_property name="ElementShortName">data_in[63:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/cpu/debug_reg_addr" type="array">
+         <obj_property name="ElementShortName">debug_reg_addr[4:0]</obj_property>
+         <obj_property name="ObjectShortName">debug_reg_addr[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/cpu/addr_out" type="array">
+         <obj_property name="ElementShortName">addr_out[63:0]</obj_property>
+         <obj_property name="ObjectShortName">addr_out[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/cpu/data_out" type="array">
+         <obj_property name="ElementShortName">data_out[63:0]</obj_property>
+         <obj_property name="ObjectShortName">data_out[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/cpu/pc_out" type="array">
+         <obj_property name="ElementShortName">pc_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">pc_out[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/cpu/scpu_output_mem_inst" type="array">
+         <obj_property name="ElementShortName">scpu_output_mem_inst[31:0]</obj_property>
+         <obj_property name="ObjectShortName">scpu_output_mem_inst[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/cpu/mem_write" type="logic">
+         <obj_property name="ElementShortName">mem_write</obj_property>
+         <obj_property name="ObjectShortName">mem_write</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/cpu/debug_reg_data" type="array">
+         <obj_property name="ElementShortName">debug_reg_data[63:0]</obj_property>
+         <obj_property name="ObjectShortName">debug_reg_data[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/cpu/flush" type="logic">
+         <obj_property name="ElementShortName">flush</obj_property>
+         <obj_property name="ObjectShortName">flush</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/cpu/satp_data" type="array">
+         <obj_property name="ElementShortName">satp_data[63:0]</obj_property>
+         <obj_property name="ObjectShortName">satp_data[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/cpu/write_mem_valid" type="logic">
+         <obj_property name="ElementShortName">write_mem_valid</obj_property>
+         <obj_property name="ObjectShortName">write_mem_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/cpu/vir_valid" type="logic">
+         <obj_property name="ElementShortName">vir_valid</obj_property>
+         <obj_property name="ObjectShortName">vir_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/cpu/mem_valid" type="logic">
+         <obj_property name="ElementShortName">mem_valid</obj_property>
+         <obj_property name="ObjectShortName">mem_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/cpu/mmu_data_ready" type="logic">
+         <obj_property name="ElementShortName">mmu_data_ready</obj_property>
+         <obj_property name="ObjectShortName">mmu_data_ready</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group216" type="group">
       <obj_property name="label">pc</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <wvobject fp_name="/Core_tb/uut/cpu/datapath/pc/clk" type="logic">
@@ -322,6 +387,14 @@
          <obj_property name="ElementShortName">set_pc_to_sepc</obj_property>
          <obj_property name="ObjectShortName">set_pc_to_sepc</obj_property>
       </wvobject>
+      <wvobject fp_name="/Core_tb/uut/cpu/datapath/pc/mem_valid" type="logic">
+         <obj_property name="ElementShortName">mem_valid</obj_property>
+         <obj_property name="ObjectShortName">mem_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Core_tb/uut/cpu/datapath/pc/mmu_data_ready" type="logic">
+         <obj_property name="ElementShortName">mmu_data_ready</obj_property>
+         <obj_property name="ObjectShortName">mmu_data_ready</obj_property>
+      </wvobject>
       <wvobject fp_name="/Core_tb/uut/cpu/datapath/pc/new_addr" type="array">
          <obj_property name="ElementShortName">new_addr[31:0]</obj_property>
          <obj_property name="ObjectShortName">new_addr[31:0]</obj_property>
@@ -330,17 +403,5 @@
          <obj_property name="ElementShortName">addr_reg[31:0]</obj_property>
          <obj_property name="ObjectShortName">addr_reg[31:0]</obj_property>
       </wvobject>
-   </wvobject>
-   <wvobject fp_name="/Core_tb/uut/lemon_vga_top/u_rgb_out/row1" type="array">
-      <obj_property name="ElementShortName">row1[639:0][69:0]</obj_property>
-      <obj_property name="ObjectShortName">row1[639:0][69:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Core_tb/uut/lemon_vga_top/u_rgb_out/row2" type="array">
-      <obj_property name="ElementShortName">row2[639:0][69:0]</obj_property>
-      <obj_property name="ObjectShortName">row2[639:0][69:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Core_tb/uut/lemon_vga_top/u_rgb_out/row3" type="array">
-      <obj_property name="ElementShortName">row3[639:0][69:0]</obj_property>
-      <obj_property name="ObjectShortName">row3[639:0][69:0]</obj_property>
    </wvobject>
 </wave_config>

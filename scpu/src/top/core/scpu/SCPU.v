@@ -13,7 +13,17 @@ module SCPU(
     output [31:0] pc_out,   // connect to instruction memory
     output [31:0] scpu_output_mem_inst,
     output        mem_write,
-    output[63:0] debug_reg_data
+    output[63:0] debug_reg_data,
+
+
+    // for mmu
+    output flush,
+    output [63:0] satp_data,
+    output write_mem_valid,
+    output vir_valid,
+    output mem_valid,
+
+    input mmu_data_ready
 );
 
     Datapath datapath (
@@ -30,7 +40,16 @@ module SCPU(
         .datapathoutput_mem_inst(scpu_output_mem_inst),
         .mem_write(mem_write),
         .debug_reg_addr(debug_reg_addr),
-        .debug_reg_data(debug_reg_data)
+        .debug_reg_data(debug_reg_data),
+
+        // for mmu
+        .datapathout_flush(flush),
+        .datapathout_satp_data(satp_data),
+        .datapathout_write_mem_valid(write_mem_valid),
+        .datapathout_vir_valid(vir_valid),
+        .datapathout_mem_valid(mem_valid),
+
+        .datapathin_mmu_data_ready(mmu_data_ready)
     );
     
 endmodule

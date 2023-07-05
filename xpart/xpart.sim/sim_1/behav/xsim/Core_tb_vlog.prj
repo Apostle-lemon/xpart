@@ -21,13 +21,16 @@ verilog xil_defaultlib  --include "../../../../../scpu/src/top/core/scpu/datapat
 "../../../../../scpu/src/top/core/scpu/datapath/app/ex_add.v" \
 "../../../../../scpu/src/top/core/scpu/datapath/regs/exmemreg.v" \
 "../../../../../scpu/src/top/core/scpu/datapath/app/forwarding_unit.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/mmu_related/gen_flush.v" \
 "../../../../../scpu/src/top/core/scpu/datapath/app/id_idex_signal.v" \
 "../../../../../scpu/src/top/core/scpu/datapath/app/id_inst_mux.v" \
 "../../../../../scpu/src/top/core/scpu/datapath/regs/idexreg.v" \
 "../../../../../scpu/src/top/core/scpu/datapath/app/if_inst_mux.v" \
 "../../../../../scpu/src/top/core/scpu/datapath/regs/ifidreg.v" \
 "../../../../../scpu/src/top/core/scpu/datapath/app/imm_gen.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/mmu_related/mem_valid.v" \
 "../../../../../scpu/src/top/core/scpu/datapath/regs/memwbreg.v" \
+"../../../../../scpu/src/top/core/mmu/mmu.v" \
 "../../../../../scpu/ram/myRam.v" \
 "../../../../../scpu/rom/myRom.v" \
 "../../../../../scpu/src/top/core/scpu/datapath/app/pc.v" \
@@ -42,6 +45,7 @@ verilog xil_defaultlib  --include "../../../../../scpu/src/top/core/scpu/datapat
 "../../../../../scpu/src/vga/vga_gen_grafic.v" \
 "../../../../../scpu/src/vga/vga_sync.v" \
 "../../../../../scpu/src/vga/vga_top.v" \
+"../../../../../scpu/src/top/core/scpu/datapath/mmu_related/virtual_valid.v" \
 
 sv xil_defaultlib  --include "../../../../../scpu/src/top/core/scpu/datapath/app" --include "../../../../../scpu/src/top/core/scpu/datapath/csr" \
 "../../../../../scpu/test_bench/Core_tb.sv" \

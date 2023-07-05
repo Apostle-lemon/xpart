@@ -126,6 +126,11 @@ trap_handler:
 _switch_to:
     lw      a2, 0(a0)
     lw      a3, 0(a1)
+
+    lw a4,0(a3)
+    li a5, 0x0B000000
+    sw a4, 31(a5)
+
     addi    a2, a2, TSS_OFFSET
     addi    a3, a3, TSS_OFFSET
 

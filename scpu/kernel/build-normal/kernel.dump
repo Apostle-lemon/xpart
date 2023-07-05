@@ -98,6 +98,14 @@ Disassembly of section .text:
 00000148 <_switch_to>:
  148:	00052603          	lw	a2,0(a0)
  14c:	0005a683          	lw	a3,0(a1)
+
+//LEMON_ADD:
+0x0006A703 // a4 = next's task-id
+0x0B0007B7
+0x00078793 // a5 = 0x0B00 0000
+0x00E7AFA3 // sw a4 31(a5)
+
+
  150:	00860613          	addi	a2,a2,8
  154:	00868693          	addi	a3,a3,8
  158:	00162023          	sw	ra,0(a2)

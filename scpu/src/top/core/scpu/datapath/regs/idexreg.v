@@ -1,6 +1,10 @@
 module IDEXREG (
     input clk,
     input rst,
+
+    input mem_valid,
+    input mmu_data_ready,
+
     input [4:0] idexin_ex,
     input [2:0] idexin_m,
     input [2:0] idexin_wb,
@@ -54,7 +58,21 @@ module IDEXREG (
             idexout_ex_rd_addr_reg <= 5'b0;
             idexout_ex_pc_addr0_reg <= 32'b0;
             idexout_ex_inst_reg <= 32'h00000013;
-        end else if (idexin_ex_is_branch_jump || idexin_mem_is_branch_jump) begin
+        end else if( mem_valid==1'b1 && mmu_data_ready==1'b0) begin
+            idexout_ex_reg <= idexout_ex_reg;
+            idexout_m_reg <= idexout_m_reg;
+            idexout_wb_reg <= idexout_wb_reg;
+            idexout_ex_pc_out_reg <= idexout_ex_pc_out_reg;
+            idexout_ex_rs1_data_reg <= idexout_ex_rs1_data_reg;
+            idexout_ex_rs2_data_reg <= idexout_ex_rs2_data_reg;
+            idexout_ex_imm_reg <= idexout_ex_imm_reg;
+            idexout_ex_alu_op_reg <= idexout_ex_alu_op_reg;
+            idexout_ex_rd_addr_reg <= idexout_ex_rd_addr_reg;
+            idexout_ex_pc_addr0_reg <= idexout_ex_pc_addr0_reg;
+            idexout_ex_inst_reg <= idexout_ex_inst_reg;
+        end
+        
+        else if (idexin_ex_is_branch_jump || idexin_mem_is_branch_jump) begin
             idexout_ex_reg <= 5'b0;
             idexout_m_reg <= 3'b0;
             idexout_wb_reg <= 4'b0;

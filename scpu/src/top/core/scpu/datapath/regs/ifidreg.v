@@ -1,6 +1,10 @@
 module IFIDREG(
     input clk,
     input rst,
+
+    input mem_valid,
+    input mmu_data_ready,
+
     input [31:0] ifidin_pc_out,
     input [31:0] ifidin_inst,
     input [31:0] ifidin_pc_addr0,
@@ -24,6 +28,13 @@ begin
         ifidout_inst_reg <= 32'h00000013;
         ifidout_id_pc_addr0_reg <= 32'h00000000;
     end
+    
+    else if(mem_valid==1'b1 && mmu_data_ready==1'b0) begin
+        ifidout_pc_out_reg <= ifidout_pc_out_reg;
+        ifidout_inst_reg <= ifidout_inst_reg;
+        ifidout_id_pc_addr0_reg <= ifidout_id_pc_addr0_reg;
+    end
+    
     else if(ifidin_ifid_write) begin
         ifidout_pc_out_reg <= ifidin_pc_out;
         ifidout_inst_reg <= ifidin_inst;

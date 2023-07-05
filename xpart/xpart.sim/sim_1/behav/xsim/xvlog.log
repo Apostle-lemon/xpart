@@ -20,6 +20,8 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/universit
 INFO: [VRFC 10-311] analyzing module BRANCH_JUMP_DETECT
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/core.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Core
+WARNING: [VRFC 10-3248] data object 'mmu_input_inst' is already declared [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/core.v:89]
+WARNING: [VRFC 10-3703] second declaration of 'mmu_input_inst' ignored [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/core.v:89]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/counter_mod_m.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module counter_mod_m
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/csr/csr_control.v" into library xil_defaultlib
@@ -34,13 +36,16 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/universit
 INFO: [VRFC 10-311] analyzing module CSR_UNIT
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/datapath.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Datapath
-INFO: [VRFC 10-2458] undeclared symbol ex_is_mret, assumed default net type wire [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/datapath.v:139]
+INFO: [VRFC 10-2458] undeclared symbol ex_is_mret, assumed default net type wire [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/datapath.v:159]
+WARNING: [VRFC 10-3380] identifier 'datapath_satp_data' is used before its declaration [C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/datapath.v:35]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/ex_add.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module EXADD
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/regs/exmemreg.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module EXMEMREG
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/forwarding_unit.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module FORWARDING_UNIT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/mmu_related/gen_flush.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gen_flush
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/id_idex_signal.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ID_IDEX_SIGNAL
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/id_inst_mux.v" into library xil_defaultlib
@@ -53,8 +58,13 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/universit
 INFO: [VRFC 10-311] analyzing module IFIDREG
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/app/imm_gen.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/mmu_related/mem_valid.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_valid
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/regs/memwbreg.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module MEMWBREG
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/mmu/mmu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mmu
+INFO: [VRFC 10-311] analyzing module tlb
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/ram/myRam.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module myRam
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/rom/myRom.v" into library xil_defaultlib
@@ -83,3 +93,5 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/universit
 INFO: [VRFC 10-311] analyzing module vga_sync
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/vga/vga_top.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module vga_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/src/top/core/scpu/datapath/mmu_related/virtual_valid.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module virtual_valid

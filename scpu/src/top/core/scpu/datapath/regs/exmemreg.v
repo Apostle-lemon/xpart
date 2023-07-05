@@ -1,6 +1,10 @@
 module EXMEMREG(
     input clk,
     input rst,
+
+    input mem_valid,
+    input mmu_data_ready,
+
     input [2:0] exmemin_m,
     input [2:0] exmemin_wb,
     input [63:0] exmemin_ex_add_result,
@@ -44,8 +48,7 @@ module EXMEMREG(
 
     always @(posedge clk or posedge rst)
     begin
-        if(rst)
-        begin
+        if(rst) begin
             exmemout_m_reg = 3'b000;
             exmemout_wb_reg = 4'b0000;
             exmemout_pc_addr1_reg = 32'b00000000000000000000000000000000;
@@ -59,8 +62,23 @@ module EXMEMREG(
             exmeout_mem_zero_reg = 1'b0;
             exmemout_mem_pc_out_reg = 32'b00000000000000000000000000000000;
         end
-        else
-        begin
+
+        else if (mem_valid && !mmu_data_ready) begin
+            exmemout_m_reg = exmemout_m_reg;
+            exmemout_wb_reg = exmemout_wb_reg;
+            exmemout_pc_addr1_reg = exmemout_pc_addr1_reg;
+            exmemout_mem_alu_result_reg = exmemout_mem_alu_result_reg;
+            exmemout_mem_rs1_data_reg = exmemout_mem_rs1_data_reg;
+            exmemout_mem_rs2_data_reg = exmemout_mem_rs2_data_reg;
+            exmemout_mem_rd_addr_reg = exmemout_mem_rd_addr_reg;
+            exmemout_mem_imm_reg = exmemout_mem_imm_reg;
+            exmeout_mem_pc_addr0_reg = exmeout_mem_pc_addr0_reg;
+            exmemout_mem_inst_reg = exmemout_mem_inst_reg;
+            exmeout_mem_zero_reg = exmeout_mem_zero_reg;
+            exmemout_mem_pc_out_reg = exmemout_mem_pc_out_reg;
+        end 
+
+        else begin
             exmemout_m_reg = exmemin_m;
             // case(exmemin_ex_inst[6:0]) 
             //     7'b1110011 : // 如果是 SYSTEM 指令，就设置 WB 使能

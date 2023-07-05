@@ -5,11 +5,12 @@ module myRam(
     input we,
     input [63:0] write_data,
     input [31:0] myraminput_inst,
-    input [9:0] address,
+    input [11:0] address,
     output [63:0] read_data
 );
 
-    reg [7:0] ram [0:511];
+    // reg [7:0] ram [0:511];
+    reg [7:0] ram [0:4095];
     wire [6:0] opcode = myraminput_inst[6:0];
     wire [2:0] funct3 = myraminput_inst[14:12];
     reg [63:0] read_data_reg;

@@ -1,6 +1,10 @@
 module MEMWBREG (
     input clk,
     input rst,
+
+    input mem_valid,
+    input mmu_data_ready,
+
     input [2:0] memwbin_wb,
     input [63:0] memwbin_mem_data_in,
     input [63:0] memwbin_mem_alu_result,
@@ -42,6 +46,18 @@ module MEMWBREG (
             memwbout_wb_inst_reg <= 32'h00000013;
             memwbout_wb_pc_out_reg <= 32'h00000000;
         end
+
+        else if (mem_valid==1'b1 && mmu_data_ready==1'b0) begin
+            memwbout_wb_wb_reg <= memwbout_wb_wb_reg;
+            memwbout_wb_data_in_reg <= memwbout_wb_data_in_reg;
+            memwbout_wb_alu_result_reg <= memwbout_wb_alu_result_reg;
+            memwbout_wb_imm_reg <= memwbout_wb_imm_reg;
+            memwbout_wb_rd_addr_reg <= memwbout_wb_rd_addr_reg;
+            memwbout_wb_pc_addr0_reg <= memwbout_wb_pc_addr0_reg;
+            memwbout_wb_inst_reg <= memwbout_wb_inst_reg;
+            memwbout_wb_pc_out_reg <= memwbout_wb_pc_out_reg;
+        end
+
         else
         begin
             memwbout_wb_wb_reg <= memwbin_wb;

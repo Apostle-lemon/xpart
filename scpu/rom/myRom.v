@@ -7,7 +7,7 @@ module myRom(
     reg [31:0] rom [0:2047];
 
 
-    localparam FILE_PATH = "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/rom/kernel_normal.sim";
+    localparam FILE_PATH = "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/scpu/rom/kernel_normal2.sim";
     // localparam FILE_PATH = "C:/Users/ethereal/Desktop/university/3-00ZJUcourse/computer_systemIII/xpart/test/result.txt";
     initial begin
         $readmemh(FILE_PATH, rom);
